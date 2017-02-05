@@ -1,6 +1,73 @@
 @import "fonts";
 @import "base";
 @import "components";
-@import "header";
-@import "main";
 @import "media-queries";
+
+//header
+.header {
+  position: relative;
+  background: url($img-dir + "section-bg-1.jpg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 698px;
+  //padding-bottom: 77px;
+
+  &_menu {
+    background-color: rgba(255, 255, 255, 0.6);
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }//::after
+
+    .c-enrol {
+      color: #EF4E37;
+    }
+  }//header_menu
+}//header
+
+//video
+.video {
+  height: 760px;
+  background: url($img-dir + "section-bg-2.jpg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}//video
+
+
+//train
+.train {
+  padding: 3.75em 0;
+
+  &-list {
+
+  }
+
+  &-item {
+    padding: 8px 11px;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+
+    &:nth-child(even) {
+      background-color: #dbe200;
+    }
+
+    &_point {
+      text-align: center;
+      margin-right: 20px;
+      font-size: 14px;
+    }
+  }
+}//train
+
+
+///footer-menu
+.footer-menu {
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}//footer-menu

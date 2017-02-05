@@ -10,7 +10,8 @@ ul {
   padding: 0;
 }
 
-html {
+html,
+body {
   font-family: $font-text;
 }
 
@@ -21,11 +22,19 @@ p {
   line-height: 1.2em;
 }
 
+a {
+  text-decoration:  none;
+}
+
+ul {
+  list-style: none;
+}
+
 .container-layout {
+  position: relative;
   width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 10px;
 }
 
 //grid
@@ -129,4 +138,11 @@ input[type=text] {
 
 input[placeholder] {
   color: #1C3344;
+}
+
+.section_title {
+  color: #1F9AA9;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
