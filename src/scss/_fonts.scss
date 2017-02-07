@@ -26,6 +26,34 @@
   src: local('Helvetica Neue LT'), local('HelveticaNeueLT'), url('../fonts/helveticaneuelt-mediumcond.woff') format('woff');
 }
 
+
+
+
+@font-face {
+  font-family: 'Helvetica Neue LT 57';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Helvetica Neue LT 57'), local('HelveticaNeueLT-57'), url('../fonts/LT_55413.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT 57';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Helvetica Neue LT 57'), local('HelveticaNeueLT-57'), url('../fonts/LT_55415.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Helvetica Neue LT 57';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Helvetica Neue LT 57'), local('HelveticaNeueLT-57'), url('../fonts/LT_55417.woff') format('woff');
+}
+
+
+
+
 @font-face {
   font-family: 'PF DinText Pro';
   font-style: normal;
@@ -46,6 +74,7 @@
   font-weight: 400;
   src: local('PF DinText Pro Regular'), local('PFDinTextPro-Regular'), url('../fonts/pfdintextpro-regular.woff') format('woff');
 }
+
 
 @font-face {
   font-family: 'PF DinText Pro';

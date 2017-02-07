@@ -23,6 +23,24 @@
   src: local("Helvetica Neue LT"), local("HelveticaNeueLT"), url("../fonts/helveticaneuelt-mediumcond.woff") format("woff"); }
 
 @font-face {
+  font-family: 'Helvetica Neue LT 57';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Helvetica Neue LT 57"), local("HelveticaNeueLT-57"), url("../fonts/LT_55413.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Helvetica Neue LT 57';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Helvetica Neue LT 57"), local("HelveticaNeueLT-57"), url("../fonts/LT_55415.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Helvetica Neue LT 57';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Helvetica Neue LT 57"), local("HelveticaNeueLT-57"), url("../fonts/LT_55417.woff") format("woff"); }
+
+@font-face {
   font-family: 'PF DinText Pro';
   font-style: normal;
   font-weight: 100;
@@ -58,7 +76,8 @@ ul {
 
 html,
 body {
-  font-family: "Helvetica Neue LT", sans-serif; }
+  font-family: "Helvetica Neue LT 57", sans-serif;
+  font-weight: 100; }
 
 p {
   margin: 0;
@@ -79,7 +98,6 @@ ul {
   margin-right: auto; }
 
 .grid {
-  font-size: 0;
   position: relative;
   z-index: 999; }
   .grid::after {
@@ -108,7 +126,7 @@ ul {
 label {
   display: inline-block;
   cursor: pointer;
-  font: 600 18px/1.2 "Helvetica Neue LT", sans-serif;
+  font: 600 18px/1.2 "Helvetica Neue LT 57", sans-serif;
   vertical-align: middle;
   color: #fff;
   padding: 0;
@@ -156,9 +174,21 @@ input[placeholder] {
 
 .section_title {
   color: #1F9AA9;
+  font-family: 'Helvetica Neue LT 57';
   font-size: 50px;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px; }
+
+.section_subtitle {
+  color: #212222;
+  font-family: 'Helvetica Neue LT 57';
+  font-size: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px; }
 
 .c-menu {
   float: left; }
@@ -198,18 +228,33 @@ input[placeholder] {
 .c-btn-record {
   display: inline-block;
   color: #FFF;
+  font-family: 'Helvetica Neue LT 57';
   font-size: 2.25em;
   font-weight: 400;
   text-transform: uppercase;
   background-color: #eee;
   border-radius: 50px;
-  padding: 18px 30px; }
+  padding: 11px 30px 9px;
+  margin-bottom: 58px; }
 
 .header {
   position: relative;
   background: url("../img/section-bg-1.jpg") 0 0 no-repeat;
   background-size: cover;
-  height: 698px; }
+  height: 698px;
+  padding-top: 16px; }
+  .header .grid_item {
+    width: 400px; }
+  .header-logo {
+    margin-bottom: 52px; }
+    .header-logo_img {
+      margin-bottom: 10px; }
+    .header-logo_text {
+      color: #1E2431;
+      font-family: "Neo Sans Cyr";
+      font-size: 36px;
+      font-weight: 400;
+      text-transform: uppercase; }
   .header_menu {
     background-color: rgba(255, 255, 255, 0.6); }
     .header_menu::after {
@@ -218,6 +263,21 @@ input[placeholder] {
       clear: both; }
     .header_menu .c-enrol {
       color: #EF4E37; }
+  .header-timer {
+    margin-bottom: 52px; }
+    .header-timer_title {
+      color: #212121;
+      font-size: 29px;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-family: 'Helvetica Neue LT 57'; }
+  .header-tagline {
+    margin-bottom: 10px;
+    color: #EF4E37;
+    font-family: 'Helvetica Neue LT 57';
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase; }
 
 .video {
   height: 760px;
@@ -230,13 +290,37 @@ input[placeholder] {
     padding: 8px 11px;
     border-radius: 2px;
     vertical-align: middle;
-    margin-bottom: 4px; }
+    margin-bottom: 4px;
+    font-weight: 100; }
     .train-item:nth-child(even) {
-      background-color: #dbe200; }
+      background-color: #dbe200;
+      display: inline-block; }
     .train-item_point {
       text-align: center;
       margin-right: 20px;
-      font-size: 14px; }
+      font-size: 14px;
+      font-weight: 400; }
+
+.target-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 11%; }
+  .target-item_point {
+    width: 67px;
+    height: 67px;
+    position: relative; }
+    .target-item_point span {
+      color: #FFF;
+      font-family: 'Helvetica Neue LT 57';
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 54%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
 
 .footer-menu::after {
   content: '';

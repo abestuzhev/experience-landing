@@ -1,5 +1,5 @@
 
-$font-text: 'Helvetica Neue LT', sans-serif;
+$font-text: 'Helvetica Neue LT 57', sans-serif;
 $font-company: 'Neo Sans Cyr', sans-serif;
 $font-contrasty: 'PF DinText Pro', sans-serif;
 
@@ -13,6 +13,7 @@ ul {
 html,
 body {
   font-family: $font-text;
+  font-weight: 100;
 }
 
 p {
@@ -39,7 +40,7 @@ ul {
 
 //grid
 .grid {
-  font-size: 0;
+  //font-size: 0;
   position: relative;
   z-index: 999;
 
@@ -142,7 +143,20 @@ input[placeholder] {
 
 .section_title {
   color: #1F9AA9;
+  font-family: 'Helvetica Neue LT 57';
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
+  margin: 10px;
+}
+
+.section_subtitle {
+  color: #212222;
+  font-family: 'Helvetica Neue LT 57';
+  font-size: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px;
 }

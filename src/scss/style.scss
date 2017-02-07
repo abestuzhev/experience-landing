@@ -10,7 +10,29 @@
   -webkit-background-size: cover;
   background-size: cover;
   height: 698px;
-  //padding-bottom: 77px;
+  padding-top: 16px;
+
+  //grid-item
+  .grid_item {
+    width: 400px;
+  }
+
+  //header-logo
+  &-logo {
+    margin-bottom: 52px;
+
+    &_img {
+      margin-bottom: 10px;
+    }
+
+    &_text {
+      color: #1E2431;
+      font-family: "Neo Sans Cyr";
+      font-size: 36px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
 
   &_menu {
     background-color: rgba(255, 255, 255, 0.6);
@@ -25,6 +47,27 @@
       color: #EF4E37;
     }
   }//header_menu
+
+  &-timer {
+    margin-bottom: 52px;
+
+    &_title {
+      color: #212121;
+      font-size: 29px;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-family: 'Helvetica Neue LT 57';
+    }
+  }
+
+  &-tagline {
+    margin-bottom: 10px;
+    color: #EF4E37;
+    font-family: 'Helvetica Neue LT 57';
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+  }//tagline
 }//header
 
 //video
@@ -49,19 +92,50 @@
     border-radius: 2px;
     vertical-align: middle;
     margin-bottom: 4px;
+    font-weight: 100;
 
     &:nth-child(even) {
       background-color: #dbe200;
+      display: inline-block;
     }
 
     &_point {
       text-align: center;
       margin-right: 20px;
       font-size: 14px;
+      font-weight: 400;
     }
   }
 }//train
 
+
+//target
+.target {
+
+  &-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 11%;
+
+    &_point {
+      width: 67px;
+      height: 67px;
+      position: relative;
+
+      span {
+        color: #FFF;
+        font-family: 'Helvetica Neue LT 57';
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 54%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
 
 ///footer-menu
 .footer-menu {
