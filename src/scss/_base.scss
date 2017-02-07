@@ -141,6 +141,13 @@ input[placeholder] {
   color: #1C3344;
 }
 
+.hidden {
+opacity:0;
+}
+.visible {
+opacity:1;
+}
+
 .section_title {
   color: #1F9AA9;
   font-family: 'Helvetica Neue LT 57';

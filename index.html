@@ -6,10 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Опыт работы</title>
   <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css\animate.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!--[if lt IE 9]>
   <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
   <![endif]-->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+
+  <script>
+    $("body").css("opacity", "0");
+    $("body").fadeIn(800);
+  </script>
 </head>
 
 <body>
@@ -167,15 +174,15 @@
     <h2 class="section_title">Цель - трудойстройство</h2>
     <ul class="employment-list">
       <li class="employment-item">
-        <div class="employment-item_img"></div>
+        <div class="employment-item_img"><img src="img/employment-1.png" alt=""></div>
         <div class="employment-item_text">В видеоинтервью успешные люди расскажут о своих примерах успеха.</div>
       </li>
       <li class="employment-item">
-        <div class="employment-item_img"></div>
+        <div class="employment-item_img"><img src="img/employment-2.png" alt=""></div>
         <div class="employment-item_text">В видео лекции профессиональный наставник объяснит тонкости трудоустройства</div>
       </li>
       <li class="employment-item">
-        <div class="employment-item_img"></div>
+        <div class="employment-item_img"><img src="img/employment-3.png" alt=""></div>
         <div class="employment-item_text">За каждым студентом закреплен наставник, который ответит на вопросы и поможет пройти практическое задание.</div>
       </li>
 
@@ -183,22 +190,72 @@
   </div><!-- end container-layout -->
 </section><!--end section-->
 
+<div class="c-scroll-down">
+  <a href="#" class="c-scroll-down_icon"></a>
+</div>
 
 <section class="reviews-student">
+  <img class="reviews-student_elem-1" src="img/elem-rewiews-student.png" alt="">
   <div class="container-layout">
     <h2 class="section_title">Отзывы студентов</h2>
-
+    <div class="slider">
+      <div class="slider-item">
+        <div class="c-card">
+          <div class="c-card_img"><img src="img/student-1.jpg" alt=""></div>
+          <div class="c-card_name">Алиса Сомова, <span class="c-card_year">24</span></div>
+        </div><!-- c-card -->
+      </div>
+      <div class="slider-item">
+        <div class="c-card">
+          <div class="c-card_img"><img src="img/student-2.jpg" alt=""></div>
+          <div class="c-card_name">Влад Борисов, <span class="c-card_year">24</span></div>
+        </div><!-- c-card -->
+      </div>
+      <div class="slider-item">
+        <div class="c-card">
+          <div class="c-card_img"><img src="img/student-3.jpg" alt=""></div>
+          <div class="c-card_name">Ксения, <span class="c-card_year">24</span></div>
+        </div><!-- c-card -->
+      </div>
+    </div><!--end slider-->
   </div><!-- end container-layout -->
 </section><!--end section-->
 
+<div class="c-scroll-down">
+  <a href="#" class="c-scroll-down_icon"></a>
+</div>
 
 <section class="reviews-employers">
+  <img class="reviews-employers_bg" src="img/reviews-employers-bg.png" alt="">
   <div class="container-layout">
     <h2 class="section_title">Отзывы работодателей</h2>
 
+    <div class="slider">
+      <div class="slider-item">
+        <div class="c-card">
+          <div class="c-card_img"><img src="img/student-1.jpg" alt=""></div>
+          <div class="c-card_name">Алиса Сомова, <span class="c-card_year">24</span></div>
+        </div><!-- c-card -->
+      </div>
+      <div class="slider-item">
+        <div class="c-card">
+          <div class="c-card_img"><img src="img/student-2.jpg" alt=""></div>
+          <div class="c-card_name">Влад Борисов, <span class="c-card_year">24</span></div>
+        </div><!-- c-card -->
+      </div>
+      <div class="slider-item">
+        <div class="c-card">
+          <div class="c-card_img"><img src="img/student-3.jpg" alt=""></div>
+          <div class="c-card_name">Ксения, <span class="c-card_year">24</span></div>
+        </div><!-- c-card -->
+      </div>
+    </div><!--end slider-->
   </div><!-- end container-layout -->
 </section><!--end section-->
 
+<div class="c-scroll-down">
+  <a href="#" class="c-scroll-down_icon"></a>
+</div>
 
 <section class="entry-course">
   <div class="container-layout">
@@ -212,11 +269,30 @@
 <section class="trainers">
   <div class="container-layout">
     <h2 class="section_title">Наши тренеры</h2>
+    <ul class="trainers-list">
+      <li class="trainers-item">
+        <div class="trainers-item_img"><img src="img/trainers-1.png" alt=""></div>
+        <div class="trainers-item_name">Алиса Сомова, 40 лет.</div>
+        <div class="trainers-item_text">" Бизнес-консультант с 10-летним опытом ведения собственного бизнеса, 8-летним опытом бизнес- консультирования и 15-летним опытом личных продаж. Сферы интересов: Бизнес, лидерство, стратеги достижения результатов ... "</div>
+      </li><!-- trainers-item -->
+
+      <li class="trainers-item">
+        <div class="trainers-item_img"><img src="img/trainers-2.png" alt=""></div>
+        <div class="trainers-item_name">Влад Борисов, 34 года.</div>
+        <div class="trainers-item_text">" Бизнес тренер Евгений Колотилов принадлежит к числу наиболее компетентных в России специалистов по продажам в сегменте В2В (business to business). Является практиком с личным более чем 20 -ти летним опытом в продажах и успешным опытом построения отделов продаж... "</div>
+      </li><!-- trainers-item -->
+
+      <li class="trainers-item">
+        <div class="trainers-item_img"><img src="img/trainers-3.png" alt=""></div>
+        <div class="trainers-item_name">Ксения, 51 год.</div>
+        <div class="trainers-item_text">Является организатором самой большой в мире конференции по инфобизнесу: Инфоконференция. Инфоконференцию ежегодно посещают более 2х тысяч человек и более 100 тысяч смотрят и слушают ее в записи и онлайн. Является официальным представителем Дена Кеннеди (одного из ведущих маркетологов мира) в Торонто (Канада).</div>
+      </li><!-- trainers-item -->
+    </ul>
   </div><!-- end container-layout -->
 </section><!--end section-->
 
 <footer class="footer">
-  <div class="footer-people"></div>
+  <div class="footer-student"><img src="img/student-all.png" alt=""></div>
   <nav class="footer-menu">
     <div class="container-layout">
       <ul class="c-menu">
@@ -228,15 +304,19 @@
       <a href="#" class="c-enrol">Записаться на курс</a>
     </div><!-- end container-layout -->
   </nav><!--end footer-menu-->
-  <div class="footer-copyright">
-    <div class="footer-copyright_text">Copyright © 2015, Опыт работы</div>
-    <a href="http://www.leeft.ru/" class="footer-copyright_signature">Site by Leeft</a>
-  </div><!--end footer-copyright-->
+  <div class="container-layout">
+    <div class="footer-copyright">
+      <div class="footer-copyright_text">Copyright © 2015, Опыт работы</div>
+      <div class="footer-copyright_signature">Site by <a  href="http://www.leeft.ru/">Leeft</a></div>
+      <a href="#" class="footer-btn-up"></a>
+    </div><!--end footer-copyright-->
+  </div>
+
 </footer><!--end footer-->
 
 <!--scripts-->
-<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="bower_components/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

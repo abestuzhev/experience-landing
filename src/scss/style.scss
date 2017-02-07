@@ -112,7 +112,18 @@
 //target
 .target {
 
+  &-list {
+    text-align: justify;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
   &-item {
+    text-align: center;
     display: inline-block;
     vertical-align: top;
     width: 11%;
@@ -121,6 +132,7 @@
       width: 67px;
       height: 67px;
       position: relative;
+      margin: 0 auto 16px;
 
       span {
         color: #FFF;
@@ -137,11 +149,236 @@
   }
 }
 
-///footer-menu
-.footer-menu {
-  &::after {
-    content: '';
-    clear: both;
-    display: block;
+//*****************************************
+//employment
+//*****************************************
+.employment {
+
+  .section_title {
+    margin-bottom: 30px;
   }
-}//footer-menu
+
+
+  &-list {
+    text-align: justify;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  &-item {
+    display: inline-block;
+    text-align: center;
+    width: 295px;
+    background-color: #FFF;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+    vertical-align: top;
+    padding: 26px 30px 73px;
+
+    &_img {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &_text {
+      color: #4A4A4A;
+      font-family: "Helvetica Neue LT Cyrillic";
+      font-size: 22px;
+      font-weight: 100;
+      padding-bottom: 24px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 40px;
+        height: 2px;
+        transform: translateX(-50%);
+        background-color: #5c5c5c;
+      }
+
+      &::before {
+        content: "";
+        bottom: 0;
+      }
+
+      &::after {
+        content: "";
+        bottom: -4px;
+      }
+    }
+  }
+}
+
+//*****************************************
+//reviews-student
+//*****************************************
+.reviews-student {
+  position: relative;
+
+  .section_title {
+    margin-bottom: 50px;
+  }
+
+  &_elem-1 {
+    position: absolute;
+    left: 0;
+    top: -104px;
+    background: url("../img/elem-rewiews-student.png") 0 0 no-repeat;
+  }
+}
+
+//*****************************************
+//reviews-employers
+//*****************************************
+.reviews-employers {
+  position: relative;
+
+  .section_title {
+    margin-bottom: 50px;
+  }
+
+  &_bg {
+    width: 100%;
+    position: absolute;
+    bottom: -65%;
+    left: 0;
+  }
+}
+
+
+//*****************************************
+//trainers
+//*****************************************
+.trainers {
+  padding-bottom: 104px;
+  background: url("../img/trainers-bg.png") 0 100% no-repeat;
+
+  .section_title {
+    margin-bottom: 40px;
+  }
+
+  &-list {
+    text-align: justify;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  &-item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 350px;
+
+    &_img {
+      width: 148px;
+      height: 148px;
+      border-radius: 50px;
+      margin: 0 auto 30px;
+    }
+
+    &_name {
+      color: #212222;
+      font-family: "Helvetica Neue LT Cyrillic";
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 13px;
+    }
+
+    &_text {
+      color: #343434;
+      font-family: "Helvetica Neue LT Cyrillic";
+      font-size: 16px;
+    }
+  }
+}
+
+//*****************************************
+//footer
+//*****************************************
+.footer {
+
+  &-student {
+    height: 183px;
+    // width: 100%;
+    background: url("../img/footer-student-bg.png") 0 0 no-repeat;
+    background-size: cover;
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-menu {
+    background-color: #2b2b2b;
+    &::after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+
+    .c-menu_link {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .c-enrol {
+      color: #25AABA;
+
+      &::before,
+      &::after {
+        background-color: #25AABA;
+      }
+    }
+  }//footer-menu
+
+  &-copyright {
+    padding: 16px 0;
+    color: #2B2B2B;
+    font-family: "Helvetica Neue LT Cyrillic";
+    font-size: 16px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    &_text {
+      float: left;
+    }
+
+    &_signature {
+      float: right;
+
+      a {
+        color: #2B2B2B;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-btn-up {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 41px;
+    height: 37px;
+    background: url(../img/btn-up.jpg) 0 0 no-repeat;
+  }
+}//footer

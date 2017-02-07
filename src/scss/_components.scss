@@ -2,18 +2,19 @@
   float: left;
   &_item {
     display: inline-block;
-  }
-
-  &_link {
-    display: block;
-    padding: 1.875em 2.4em;
-    color: #212121;
-    font-size: 1.125em;
-    font-weight: 700;
 
     &:first-child {
       padding-left: 0;
     }
+  }
+
+  &_link {
+    display: block;
+    padding: 1.875em 1.25em;
+    color: #212121;
+    font-size: 1.125em;
+    font-weight: 700;
+
   }
 }
 
@@ -22,6 +23,7 @@
 .c-enrol {
   float: right;
   margin: 1.875em;
+  margin-right: 0;
   font-size: 1.125em;
   text-transform: uppercase;
   color: #212121;
@@ -61,4 +63,46 @@
   border-radius: 50px;
   padding: 11px 30px 9px;
   margin-bottom: 58px;
+}
+
+.slider {
+  &-item {
+    display: inline-block;
+  }
+}
+
+//c-card
+.c-card {
+
+  &_img {
+
+  }
+
+  &_name {
+    color: #212222;
+    font-family: "Helvetica Neue LT Cyrillic";
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &_year {
+    color: #212222;
+    font-family: "Helvetica Neue LT Cyrillic";
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+.c-scroll-down {
+  padding: 60px 0 68px;
+  text-align: center;
+  position: relative;
+  z-index: 999;
+
+  &_icon {
+    display: inline-block;
+    width: 29px;
+    height: 79px;
+    background: url("../img/icon-scroll-down.png") 0 0 no-repeat;
+  }
 }
