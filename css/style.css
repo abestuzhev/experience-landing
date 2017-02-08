@@ -1,26 +1,20 @@
 @font-face {
-  font-family: 'Helvetica Neue LT';
+  font-family: 'Helvetica Neue LT Cyrillic';
   font-style: normal;
   font-weight: 100;
-  src: local("Helvetica Neue LT"), local("HelveticaNeueLT"), url("../fonts/helveticaneuelt-thincond.woff") format("woff"); }
+  src: local("Helvetica Neue LT Cyrillic Th"), local("HelveticaNeueLTCyrillic-th"), url("../fonts/HelveticaNeueLTCyrillicTnCn.woff") format("woff"); }
 
 @font-face {
-  font-family: 'Helvetica Neue LT';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Helvetica Neue LT"), local("HelveticaNeueLT"), url("../fonts/helveticaneuelt-lightcond.woff") format("woff"); }
-
-@font-face {
-  font-family: 'Helvetica Neue LT';
+  font-family: 'Helvetica Neue LT Cyrillic';
   font-style: normal;
   font-weight: 400;
-  src: local("Helvetica Neue LT"), local("HelveticaNeueLT"), url("../fonts/helveticaneuelt-heavycond.woff") format("woff"); }
+  src: local("Helvetica Neue LT Cyrillic Reg"), local("HelveticaNeueLTCyrillic-reg"), url("../fonts/HelveticaNeueLTCyrillicRegCn.woff") format("woff"); }
 
 @font-face {
-  font-family: 'Helvetica Neue LT';
+  font-family: 'Helvetica Neue LT Cyrillic';
   font-style: normal;
   font-weight: 500;
-  src: local("Helvetica Neue LT"), local("HelveticaNeueLT"), url("../fonts/helveticaneuelt-mediumcond.woff") format("woff"); }
+  src: local("Helvetica Neue LT Cyrillic Hev"), local("HelveticaNeueLTCyrillic-hev"), url("../fonts/HelveticaNeueLTCyrillic87HeavyCn.woff") format("woff"); }
 
 @font-face {
   font-family: 'Helvetica Neue LT 57';
@@ -76,7 +70,7 @@ ul {
 
 html,
 body {
-  font-family: "Helvetica Neue LT 57", sans-serif;
+  font-family: "Helvetica Neue LT Cyrillic", sans-serif;
   font-weight: 100; }
 
 p {
@@ -96,6 +90,10 @@ ul {
   width: 1100px;
   margin-left: auto;
   margin-right: auto; }
+  .container-layout::after {
+    content: '';
+    display: block;
+    clear: both; }
 
 .grid {
   position: relative;
@@ -126,7 +124,7 @@ ul {
 label {
   display: inline-block;
   cursor: pointer;
-  font: 600 18px/1.2 "Helvetica Neue LT 57", sans-serif;
+  font: 600 18px/1.2 "Helvetica Neue LT Cyrillic", sans-serif;
   vertical-align: middle;
   color: #fff;
   padding: 0;
@@ -161,13 +159,13 @@ input[type=checkbox]:checked + label:after {
   background: url("../img/check.png") no-repeat 50% 50%; }
 
 input[type=text] {
-  border: none;
+  border: 2px solid #fff;
   outline: none;
-  border-radius: 50px;
-  background-color: #fff;
+  border-radius: 2px;
   color: #1C3344;
+  width: 100%;
   font-size: 16px;
-  padding: 13px 22px 13px; }
+  padding: 13px; }
 
 input[placeholder] {
   color: #1C3344; }
@@ -180,16 +178,16 @@ input[placeholder] {
 
 .section_title {
   color: #1F9AA9;
-  font-family: 'Helvetica Neue LT 57';
+  font-family: 'Helvetica Neue LT Cyrillic';
+  font-weight: 500;
   font-size: 50px;
-  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   margin: 10px; }
 
 .section_subtitle {
   color: #212222;
-  font-family: 'Helvetica Neue LT 57';
+  font-family: 'Helvetica Neue LT Cyrillic';
   font-size: 40px;
   font-weight: 100;
   text-transform: uppercase;
@@ -233,16 +231,44 @@ input[placeholder] {
     bottom: -9px; }
 
 .c-btn-record {
+  border: none;
   display: inline-block;
-  color: #FFF;
+  color: #000;
   font-family: 'Helvetica Neue LT 57';
   font-size: 2.25em;
   font-weight: 400;
   text-transform: uppercase;
-  background-color: #eee;
   border-radius: 50px;
-  padding: 11px 30px 9px;
-  margin-bottom: 58px; }
+  padding: .40em 1.3em .21em .9em;
+  margin-bottom: 58px;
+  background-color: #e7ee15;
+  position: relative;
+  cursor: pointer; }
+  .c-btn-record::after {
+    content: '';
+    width: 7px;
+    height: 11px;
+    background: url("../img/icon-arrow.png") 0 0 no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .c-btn-record--small {
+    font-size: 1.125em;
+    padding: .5em 3.1em .5em 2.5em; }
+    .c-btn-record--small::after {
+      content: '';
+      width: 7px;
+      height: 10px;
+      background: url("../img/icon-arrow.png") 0 0 no-repeat;
+      position: absolute;
+      top: 50%;
+      right: 14%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
 
 .slider-item {
   display: inline-block; }
@@ -251,7 +277,7 @@ input[placeholder] {
   color: #212222;
   font-family: "Helvetica Neue LT Cyrillic";
   font-size: 20px;
-  font-weight: 500; }
+  font-weight: 400; }
 
 .c-card_year {
   color: #212222;
@@ -274,7 +300,6 @@ input[placeholder] {
   position: relative;
   background: url("../img/section-bg-1.jpg") 0 0 no-repeat;
   background-size: cover;
-  height: 698px;
   padding-top: 16px; }
   .header .grid_item {
     width: 400px; }
@@ -303,14 +328,21 @@ input[placeholder] {
       font-size: 29px;
       font-weight: 100;
       text-transform: uppercase;
-      font-family: 'Helvetica Neue LT 57'; }
+      font-family: 'Helvetica Neue LT Cyrillic';
+      margin-bottom: 8px; }
   .header-tagline {
     margin-bottom: 10px;
     color: #EF4E37;
-    font-family: 'Helvetica Neue LT 57';
+    font-family: 'Helvetica Neue LT Cyrillic';
     font-size: 30px;
     font-weight: 100;
     text-transform: uppercase; }
+  .header .c-btn-record {
+    background-color: #25aaba;
+    color: #fff; }
+    .header .c-btn-record::after {
+      content: '';
+      background: url("../img/icon-arrow-white.png") 0 0 no-repeat; }
 
 .video {
   height: 760px;
@@ -318,13 +350,26 @@ input[placeholder] {
   background-size: cover; }
 
 .train {
-  padding: 3.75em 0; }
+  padding: 3.75em 0;
+  position: relative; }
+  .train .section_title {
+    margin-bottom: 23px; }
+  .train .section_subtitle {
+    margin-bottom: 16px; }
+  .train_bg {
+    width: 100%;
+    position: absolute;
+    bottom: -9%;
+    left: 0; }
+  .train-list {
+    margin-bottom: 50px; }
   .train-item {
     padding: 8px 11px;
     border-radius: 2px;
     vertical-align: middle;
-    margin-bottom: 4px;
-    font-weight: 100; }
+    margin-bottom: 6px;
+    font-weight: 100;
+    font-size: 21px; }
     .train-item:nth-child(even) {
       background-color: #dbe200;
       display: inline-block; }
@@ -333,36 +378,59 @@ input[placeholder] {
       margin-right: 20px;
       font-size: 14px;
       font-weight: 400; }
-
-.target-list {
-  text-align: justify; }
-  .target-list::after {
-    content: "";
+  .train-action {
     display: inline-block;
-    width: 100%; }
-
-.target-item {
-  text-align: center;
-  display: inline-block;
-  vertical-align: top;
-  width: 11%; }
-  .target-item_point {
-    width: 67px;
-    height: 67px;
-    position: relative;
-    margin: 0 auto 16px; }
-    .target-item_point span {
+    padding-left: 12px; }
+    .train-action_img {
+      text-align: center;
+      margin: 0 auto 4px; }
+    .train-action_title {
       color: #FFF;
-      font-family: 'Helvetica Neue LT 57';
-      font-size: 28px;
-      font-weight: 700;
+      font-size: 45px;
       text-transform: uppercase;
-      position: absolute;
-      top: 50%;
-      left: 54%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
+      font-weight: 500;
+      font-family: 'Helvetica Neue LT Cyrillic'; }
+    .train-action_subtitle {
+      color: #FFF;
+      font-size: 22px;
+      font-weight: 400;
+      font-family: 'Helvetica Neue LT Cyrillic';
+      margin-bottom: 10px; }
+
+.target {
+  margin-bottom: 54px; }
+  .target .section_subtitle {
+    margin-bottom: 32px; }
+  .target-list {
+    text-align: justify; }
+    .target-list::after {
+      content: "";
+      display: inline-block;
+      width: 100%; }
+  .target-item {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: 10%; }
+    .target-item_point {
+      width: 67px;
+      height: 67px;
+      position: relative;
+      margin: 0 auto 16px; }
+      .target-item_point span {
+        color: #FFF;
+        font-family: 'Helvetica Neue LT 57';
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 54%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+    .target-item_text {
+      font-size: 18px; }
 
 .employment .section_title {
   margin-bottom: 30px; }
@@ -429,6 +497,101 @@ input[placeholder] {
     bottom: -65%;
     left: 0; }
 
+.entry-course {
+  position: relative; }
+  .entry-course .section_title {
+    margin-bottom: -6px; }
+  .entry-course .section_subtitle {
+    margin-bottom: 30px; }
+  .entry-course_bg {
+    width: 100%;
+    position: absolute;
+    bottom: -6%;
+    left: 0; }
+  .entry-course_title {
+    color: #232323;
+    font-family: 'Helvetica Neue LT Cyrillic';
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase; }
+  .entry-course-timer {
+    width: 38%;
+    padding: 0 30px;
+    display: inline-block;
+    vertical-align: top; }
+  .entry-course_price {
+    font-family: 'Helvetica Neue LT Cyrillic';
+    width: 61%;
+    min-height: 297px;
+    position: relative;
+    vertical-align: top;
+    display: inline-block; }
+    .entry-course_price-bg {
+      position: absolute; }
+    .entry-course_price-wrap {
+      position: absolute;
+      z-index: 9;
+      top: 74px;
+      left: 37px; }
+    .entry-course_price-text {
+      display: inline-block;
+      color: #000;
+      font-weight: 400;
+      font-size: 30px;
+      text-transform: uppercase; }
+    .entry-course_price-old-number {
+      position: absolute;
+      top: -32px;
+      left: 128px;
+      -webkit-transform: rotate(-17deg);
+          -ms-transform: rotate(-17deg);
+              transform: rotate(-17deg);
+      color: #FFF;
+      font-weight: 400;
+      font-size: 45px;
+      text-decoration: line-through; }
+      .entry-course_price-old-number span {
+        font-size: 23px;
+        font-weight: 400;
+        text-decoration: line-through; }
+    .entry-course_price-number {
+      display: inline-block;
+      color: #FFF;
+      font-weight: 500;
+      font-size: 90px; }
+      .entry-course_price-number span {
+        color: #FFF;
+        font-size: 50px;
+        font-weight: 400; }
+  .entry-course_form {
+    float: right;
+    width: 775px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    /* Firefox 19+ */
+    /* Firefox 18- */ }
+    .entry-course_form input {
+      background-color: transparent;
+      margin-bottom: 32px;
+      color: #fff;
+      font-size: 16px; }
+    .entry-course_form ::-webkit-input-placeholder {
+      color: #ffffff; }
+    .entry-course_form ::-moz-placeholder {
+      color: #fff; }
+    .entry-course_form :-moz-placeholder {
+      color: #fff; }
+    .entry-course_form :-ms-input-placeholder {
+      color: #fff; }
+    .entry-course_form .c-btn-record {
+      margin-bottom: 10px; }
+    .entry-course_form .form_item {
+      display: inline-block;
+      width: 33%;
+      padding: 0 8px; }
+
 .trainers {
   padding-bottom: 104px;
   background: url("../img/trainers-bg.png") 0 100% no-repeat; }
@@ -459,6 +622,8 @@ input[placeholder] {
     .trainers-item_text {
       color: #343434;
       font-family: "Helvetica Neue LT Cyrillic";
+      font-weight: 400;
+      line-height: 1.6;
       font-size: 16px; }
 
 .footer-student {

@@ -9,7 +9,6 @@
   background: url($img-dir + "section-bg-1.jpg") 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  height: 698px;
   padding-top: 16px;
 
   //grid-item
@@ -56,18 +55,30 @@
       font-size: 29px;
       font-weight: 100;
       text-transform: uppercase;
-      font-family: 'Helvetica Neue LT 57';
+      font-family: 'Helvetica Neue LT Cyrillic';
+      margin-bottom: 8px;
     }
   }
 
   &-tagline {
     margin-bottom: 10px;
     color: #EF4E37;
-    font-family: 'Helvetica Neue LT 57';
+    font-family: 'Helvetica Neue LT Cyrillic';
     font-size: 30px;
     font-weight: 100;
     text-transform: uppercase;
   }//tagline
+  
+  .c-btn-record {
+    background-color: #25aaba;
+    color: #fff;
+
+    &::after {
+      content: '';
+      background: url("../img/icon-arrow-white.png") 0 0 no-repeat;
+
+    }
+  }
 }//header
 
 //video
@@ -82,17 +93,33 @@
 //train
 .train {
   padding: 3.75em 0;
+  position: relative;
+
+  .section_title {
+    margin-bottom: 23px;
+  }
+  .section_subtitle {
+    margin-bottom: 16px;
+  }
+
+  &_bg {
+    width: 100%;
+    position: absolute;
+    bottom: -9%;
+    left: 0;
+  }
 
   &-list {
-
+    margin-bottom: 50px;
   }
 
   &-item {
     padding: 8px 11px;
     border-radius: 2px;
     vertical-align: middle;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     font-weight: 100;
+    font-size: 21px;
 
     &:nth-child(even) {
       background-color: #dbe200;
@@ -106,11 +133,42 @@
       font-weight: 400;
     }
   }
+
+  &-action {
+    display: inline-block;
+    padding-left: 12px;
+
+    &_img {
+      text-align: center;
+      margin: 0 auto 4px;
+    }
+
+    &_title {
+      color: #FFF;
+      font-size: 45px;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-family: 'Helvetica Neue LT Cyrillic';
+    }
+
+    &_subtitle {
+      color: #FFF;
+      font-size: 22px;
+      font-weight: 400;
+      font-family: 'Helvetica Neue LT Cyrillic';
+      margin-bottom: 10px;
+    }
+  }
 }//train
 
 
 //target
 .target {
+  margin-bottom: 54px;
+
+  .section_subtitle {
+    margin-bottom: 32px;
+  }
 
   &-list {
     text-align: justify;
@@ -126,7 +184,7 @@
     text-align: center;
     display: inline-block;
     vertical-align: top;
-    width: 11%;
+    width: 10%;
 
     &_point {
       width: 67px;
@@ -145,6 +203,9 @@
         left: 54%;
         transform: translate(-50%, -50%);
       }
+    }
+    &_text {
+      font-size: 18px;
     }
   }
 }
@@ -178,6 +239,7 @@
     vertical-align: top;
     padding: 26px 30px 73px;
 
+
     &_img {
       text-align: center;
       margin-bottom: 24px;
@@ -190,6 +252,7 @@
       font-weight: 100;
       padding-bottom: 24px;
       position: relative;
+
 
       &::before,
       &::after {
@@ -251,6 +314,134 @@
   }
 }
 
+//*****************************************
+//entry-cours
+//*****************************************
+.entry-course {
+  position: relative;
+
+  .section_title {
+    margin-bottom: -6px;
+  }
+
+  .section_subtitle {
+    margin-bottom: 30px;
+  }
+
+  &_bg {
+    width: 100%;
+    position: absolute;
+    bottom: -6%;
+    left: 0;
+  }
+
+  &_title {
+    color: #232323;
+    font-family: 'Helvetica Neue LT Cyrillic';
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &-timer {
+    width: 38%;
+    padding: 0 30px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &_price {
+    font-family: 'Helvetica Neue LT Cyrillic';
+    width: 61%;
+    min-height: 297px;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+
+    &-bg {
+      position: absolute;
+    }
+
+    &-wrap {
+      position: absolute;
+      z-index: 9;
+      top: 74px;
+      left: 37px;
+    }
+
+    &-text {
+      display: inline-block;
+      color: #000;
+      font-weight: 400;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    &-old-number {
+      position: absolute;
+      top: -32px;
+      left: 128px;
+      transform: rotate(-17deg);
+      color: #FFF;
+      font-weight: 400;
+      font-size: 45px;
+      text-decoration: line-through;
+
+      span {
+        font-size: 23px;
+        font-weight: 400;
+        text-decoration: line-through;
+
+      }
+    }
+
+    &-number {
+      display: inline-block;
+      color: #FFF;
+      font-weight: 500;
+      font-size: 90px;
+
+      span {
+        color: #FFF;
+        font-size: 50px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &_form {
+    float: right;
+    width: 775px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    
+    input {
+      background-color: transparent;
+      margin-bottom: 32px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    ::-webkit-input-placeholder {color:#ffffff;}
+    ::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    :-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    :-ms-input-placeholder      {color:#fff;}
+
+    .c-btn-record {
+      margin-bottom: 10px;
+    }
+
+    .form_item {
+      display: inline-block;
+      width: 33%;
+      padding: 0 8px;
+    }
+  }
+
+}
+
 
 //*****************************************
 //trainers
@@ -297,6 +488,8 @@
     &_text {
       color: #343434;
       font-family: "Helvetica Neue LT Cyrillic";
+      font-weight: 400;
+      line-height: 1.6;
       font-size: 16px;
     }
   }

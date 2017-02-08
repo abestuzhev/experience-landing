@@ -1,31 +1,31 @@
 @font-face {
-  font-family: 'Helvetica Neue LT';
+  font-family: 'Helvetica Neue LT Cyrillic';
   font-style: normal;
   font-weight: 100;
-  src: local('Helvetica Neue LT'), local('HelveticaNeueLT'), url('../fonts/helveticaneuelt-thincond.woff') format('woff');
+  src: local('Helvetica Neue LT Cyrillic Th'), local('HelveticaNeueLTCyrillic-th'), url('../fonts/HelveticaNeueLTCyrillicTnCn.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica Neue LT';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Helvetica Neue LT'), local('HelveticaNeueLT'), url('../fonts/helveticaneuelt-lightcond.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Helvetica Neue LT';
+  font-family: 'Helvetica Neue LT Cyrillic';
   font-style: normal;
   font-weight: 400;
-  src: local('Helvetica Neue LT'), local('HelveticaNeueLT'), url('../fonts/helveticaneuelt-heavycond.woff') format('woff');
+  src: local('Helvetica Neue LT Cyrillic Reg'), local('HelveticaNeueLTCyrillic-reg'), url('../fonts/HelveticaNeueLTCyrillicRegCn.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica Neue LT';
+  font-family: 'Helvetica Neue LT Cyrillic';
   font-style: normal;
   font-weight: 500;
-  src: local('Helvetica Neue LT'), local('HelveticaNeueLT'), url('../fonts/helveticaneuelt-mediumcond.woff') format('woff');
+  src: local('Helvetica Neue LT Cyrillic Hev'), local('HelveticaNeueLTCyrillic-hev'), url('../fonts/HelveticaNeueLTCyrillic87HeavyCn.woff') format('woff');
 }
-
+//
+//@font-face {
+//  font-family: 'Helvetica Neue LT';
+//  font-style: normal;
+//  font-weight: 500;
+//  src: local('Helvetica Neue LT'), local('HelveticaNeueLT'), url('../fonts/helveticaneuelt-mediumcond.woff') format('woff');
+//}
+//
 
 
 
