@@ -14,7 +14,12 @@
     color: #212121;
     font-size: 1.125em;
     font-weight: 700;
+    transition: all .2s ease-out;
 
+    &:hover {
+      color: #ef4e37;
+      transition: all .2s ease-out;
+    }
   }
 }
 
@@ -29,6 +34,12 @@
   color: #212121;
   font-weight: 700;
   position: relative;
+  transition: all .2s ease-out;
+
+  &:hover {
+    opacity: .8;
+    transition: all .2s ease-out;
+  }
 
   &::before,
   &::after {
@@ -66,6 +77,12 @@
   background-color: #e7ee15;
   position: relative;
   cursor: pointer;
+  transition: all .2s ease-out;
+
+  &:hover {
+    opacity: .9;
+    transition: all .2s ease-out;
+  }
 
   &::after {
     content: '';
@@ -104,9 +121,10 @@
 
 //c-card
 .c-card {
+  display: inline-block;
 
   &_img {
-
+  margin-bottom: 10px;
   }
 
   &_name {
@@ -114,6 +132,8 @@
     font-family: "Helvetica Neue LT Cyrillic";
     font-size: 20px;
     font-weight: 400;
+    text-align: left;
+    margin-bottom: 10px;
   }
 
   &_year {
@@ -121,6 +141,18 @@
     font-family: "Helvetica Neue LT Cyrillic";
     font-size: 18px;
     font-weight: 100;
+  }
+
+  &_text {
+    text-align: left;
+    color: #212121;
+    font-family: "Helvetica Neue LT Cyrillic";
+    font-size: 13px;
+    font-weight: 400;
+
+    span {
+      font-weight: 700;
+    }
   }
 }
 

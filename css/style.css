@@ -205,7 +205,11 @@ input[placeholder] {
     padding: 1.875em 1.25em;
     color: #212121;
     font-size: 1.125em;
-    font-weight: 700; }
+    font-weight: 700;
+    transition: all .2s ease-out; }
+    .c-menu_link:hover {
+      color: #ef4e37;
+      transition: all .2s ease-out; }
 
 .c-enrol {
   float: right;
@@ -215,7 +219,11 @@ input[placeholder] {
   text-transform: uppercase;
   color: #212121;
   font-weight: 700;
-  position: relative; }
+  position: relative;
+  transition: all .2s ease-out; }
+  .c-enrol:hover {
+    opacity: .8;
+    transition: all .2s ease-out; }
   .c-enrol::before, .c-enrol::after {
     content: '';
     width: 100%;
@@ -243,7 +251,11 @@ input[placeholder] {
   margin-bottom: 58px;
   background-color: #e7ee15;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .2s ease-out; }
+  .c-btn-record:hover {
+    opacity: .9;
+    transition: all .2s ease-out; }
   .c-btn-record::after {
     content: '';
     width: 7px;
@@ -273,17 +285,30 @@ input[placeholder] {
 .slider-item {
   display: inline-block; }
 
-.c-card_name {
-  color: #212222;
-  font-family: "Helvetica Neue LT Cyrillic";
-  font-size: 20px;
-  font-weight: 400; }
-
-.c-card_year {
-  color: #212222;
-  font-family: "Helvetica Neue LT Cyrillic";
-  font-size: 18px;
-  font-weight: 100; }
+.c-card {
+  display: inline-block; }
+  .c-card_img {
+    margin-bottom: 10px; }
+  .c-card_name {
+    color: #212222;
+    font-family: "Helvetica Neue LT Cyrillic";
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 10px; }
+  .c-card_year {
+    color: #212222;
+    font-family: "Helvetica Neue LT Cyrillic";
+    font-size: 18px;
+    font-weight: 100; }
+  .c-card_text {
+    text-align: left;
+    color: #212121;
+    font-family: "Helvetica Neue LT Cyrillic";
+    font-size: 13px;
+    font-weight: 400; }
+    .c-card_text span {
+      font-weight: 700; }
 
 .c-scroll-down {
   padding: 60px 0 68px;
@@ -330,6 +355,8 @@ input[placeholder] {
       text-transform: uppercase;
       font-family: 'Helvetica Neue LT Cyrillic';
       margin-bottom: 8px; }
+    .header-timer_number > div {
+      text-align: left !important; }
   .header-tagline {
     margin-bottom: 10px;
     color: #EF4E37;
@@ -345,9 +372,18 @@ input[placeholder] {
       background: url("../img/icon-arrow-white.png") 0 0 no-repeat; }
 
 .video {
+  position: relative;
   height: 760px;
-  background: url("../img/section-bg-2.jpg") 0 0 no-repeat;
-  background-size: cover; }
+  overflow: hidden; }
+  .video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .video video {
+    width: 100%; }
 
 .train {
   padding: 3.75em 0;
@@ -359,7 +395,7 @@ input[placeholder] {
   .train_bg {
     width: 100%;
     position: absolute;
-    bottom: -9%;
+    bottom: -7%;
     left: 0; }
   .train-list {
     margin-bottom: 50px; }
@@ -478,7 +514,8 @@ input[placeholder] {
       bottom: -4px; }
 
 .reviews-student {
-  position: relative; }
+  position: relative;
+  z-index: 1002; }
   .reviews-student .section_title {
     margin-bottom: 50px; }
   .reviews-student_elem-1 {
@@ -513,12 +550,15 @@ input[placeholder] {
     font-family: 'Helvetica Neue LT Cyrillic';
     font-weight: 500;
     font-size: 24px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 10px; }
   .entry-course-timer {
     width: 38%;
     padding: 0 30px;
     display: inline-block;
     vertical-align: top; }
+  .entry-course_number > div {
+    text-align: left !important; }
   .entry-course_price {
     font-family: 'Helvetica Neue LT Cyrillic';
     width: 61%;
@@ -648,6 +688,9 @@ input[placeholder] {
   .footer-menu .c-menu_link {
     color: #fff;
     text-decoration: underline; }
+    .footer-menu .c-menu_link:hover {
+      color: #25aaba;
+      transition: all .2s ease-out; }
   .footer-menu .c-enrol {
     color: #25AABA; }
     .footer-menu .c-enrol::before, .footer-menu .c-enrol::after {
@@ -681,3 +724,59 @@ input[placeholder] {
   width: 41px;
   height: 37px;
   background: url(../img/btn-up.jpg) 0 0 no-repeat; }
+
+.timer-separator {
+  padding: 0 10px !important; }
+
+/*slick*/
+.slick-prev {
+  left: 4px;
+  background: url("../img/slider-arrow-left.png") 0 0 no-repeat; }
+
+.slider-item {
+  text-align: center; }
+
+.slick-slider {
+  z-index: 999; }
+
+.slick-next {
+  right: 4px;
+  background: url("../img/slider-arrow-right.png") 0 0 no-repeat; }
+
+.slick-prev,
+.slick-next {
+  width: 27px;
+  height: 57px;
+  border-radius: 0;
+  z-index: 999; }
+  .slick-prev::before,
+  .slick-next::before {
+    font-size: 8px;
+    color: #000; }
+
+.slick-next::before {
+  content: '';
+  width: 27px;
+  height: 57px;
+  background: url("../img/slider-arrow-right.png") 0 0 no-repeat; }
+
+.slick-prev::before {
+  content: '';
+  width: 27px;
+  height: 57px;
+  background: url("../img/slider-arrow-left.png") 0 0 no-repeat; }
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #000;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: top; }
+
+.slick-dots li.slick-active {
+  background-color: #fbbb00;
+  border: none; }

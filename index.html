@@ -5,13 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Опыт работы</title>
+  <link rel="shortcut icon" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="css\animate.css" />
+  <link rel="stylesheet" type="text/css" href="css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css"/>
+
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!--[if lt IE 9]>
   <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
   <![endif]-->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
   <script>
     $("body").css("opacity", "0");
@@ -31,7 +35,7 @@
         <div class="header-timer">
           <div class="header-timer_title">До окончания набора в группе по специальной цене осталось</div>
           <div class="header-timer_number">
-            <script src="http://megatimer.ru/s/a416569b0185ba8164dc0cc9d65c2cfb.js"></script>
+            <script src="http://megatimer.ru/s/c7601ff061f1aa24663f5780766161fa.js"></script>
           </div>
         </div>
         <div class="header-tagline">Мы гарантируем результат или вернем деньги!</div>
@@ -43,20 +47,19 @@
   <nav class="header_menu">
     <div class="container-layout">
       <ul class="c-menu">
-        <li class="c-menu_item"><a href="#" class="c-menu_link">О курсе</a></li>
-        <li class="c-menu_item"><a href="#" class="c-menu_link">Отзывы работодателей</a></li>
-        <li class="c-menu_item"><a href="#" class="c-menu_link">Отзывы студентов</a></li>
-        <li class="c-menu_item"><a href="#" class="c-menu_link">Тренеры</a></li>
+        <li class="c-menu_item"><a href="#video" class="c-menu_link">О курсе</a></li>
+        <li class="c-menu_item"><a href="#employers" class="c-menu_link">Отзывы работодателей</a></li>
+        <li class="c-menu_item"><a href="#student" class="c-menu_link">Отзывы студентов</a></li>
+        <li class="c-menu_item"><a href="#trainers" class="c-menu_link">Тренеры</a></li>
       </ul>
       <a href="#" class="c-enrol">Записаться на курс</a>
     </div><!-- end container-layout -->
   </nav><!--end header_menu-->
 </section><!--end section-->
 
-<section class="video">
-  <div class="container-layout">
-
-  </div><!-- end container-layout -->
+<section id="video" class="video">
+  <iframe width="1920" height="1080" src="https://www.youtube.com/embed/hmRDRG9bkjU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  <!-- <video src="https://player.vimeo.com/external/194611804.hd.mp4?s=6b0a2f5bcfc59703f153e45758998c9e16c33e43&amp;profile_id=119" autoplay="" loop=""></video> -->
 </section><!--end section-->
 
 
@@ -207,7 +210,7 @@
   <a href="#" class="c-scroll-down_icon"></a>
 </div>
 
-<section class="reviews-student">
+<section id="student" class="reviews-student">
   <img class="reviews-student_elem-1" src="img/elem-rewiews-student.png" alt="">
   <div class="container-layout">
     <h2 class="section_title">Отзывы студентов</h2>
@@ -230,6 +233,12 @@
           <div class="c-card_name">Ксения, <span class="c-card_year">24</span></div>
         </div><!-- c-card -->
       </div>
+      <div class="slider-item">
+        <div class="c-card">
+          <div class="c-card_img"><img src="img/student-2.jpg" alt=""></div>
+          <div class="c-card_name">Влад Борисов, <span class="c-card_year">24</span></div>
+        </div><!-- c-card -->
+      </div>
     </div><!--end slider-->
   </div><!-- end container-layout -->
 </section><!--end section-->
@@ -238,7 +247,7 @@
   <a href="#" class="c-scroll-down_icon"></a>
 </div>
 
-<section class="reviews-employers">
+<section id="employers" class="reviews-employers">
   <img class="reviews-employers_bg" src="img/reviews-employers-bg.png" alt="">
   <div class="container-layout">
     <h2 class="section_title">Отзывы работодателей</h2>
@@ -246,20 +255,34 @@
     <div class="slider">
       <div class="slider-item">
         <div class="c-card">
-          <div class="c-card_img"><img src="img/student-1.jpg" alt=""></div>
-          <div class="c-card_name">Алиса Сомова, <span class="c-card_year">24</span></div>
+          <div class="c-card_img"><img src="img/employers-1.png" alt=""></div>
+          <div class="c-card_name">Владимир Власенко</div>
+          <div class="c-card_text"><span>Должность:</span> Исполнительный директор</div>
+          <div class="c-card_text"><span>Компания:</span> ОАО "Нефтегаз"</div>
         </div><!-- c-card -->
       </div>
       <div class="slider-item">
         <div class="c-card">
-          <div class="c-card_img"><img src="img/student-2.jpg" alt=""></div>
-          <div class="c-card_name">Влад Борисов, <span class="c-card_year">24</span></div>
+          <div class="c-card_img"><img src="img/employers-2.png" alt=""></div>
+          <div class="c-card_name">Влад Борисов</div>
+          <div class="c-card_text"><span>Должность:</span> Исполнительный директор</div>
+          <div class="c-card_text"><span>Компания:</span> ОАО "IT-Tech"</div>
         </div><!-- c-card -->
       </div>
       <div class="slider-item">
         <div class="c-card">
-          <div class="c-card_img"><img src="img/student-3.jpg" alt=""></div>
-          <div class="c-card_name">Ксения, <span class="c-card_year">24</span></div>
+          <div class="c-card_img"><img src="img/employers-3.png" alt=""></div>
+          <div class="c-card_name">Влад Борисов</div>
+          <div class="c-card_text"><span>Должность:</span> Исполнительный директор</div>
+          <div class="c-card_text"><span>Компания:</span> ОАО "Steinberg"</div>
+        </div><!-- c-card -->
+      </div>
+      <div class="slider-item">
+        <div class="c-card">
+          <div class="c-card_img"><img src="img/employers-2.png" alt=""></div>
+          <div class="c-card_name">Владимир Власенко</div>
+          <div class="c-card_text"><span>Должность:</span> Исполнительный директор</div>
+          <div class="c-card_text"><span>Компания:</span> ОАО "Нефтегаз"</div>
         </div><!-- c-card -->
       </div>
     </div><!--end slider-->
@@ -277,7 +300,9 @@
     <h3 class="section_subtitle">Мы гарантируем результат или вернем деньги!</h3>
     <div class="entry-course-timer">
       <div class="entry-course_title">До окончания набора в группе по специальной цене осталось</div>
-      <div class="entry-course_number"></div>
+      <div class="entry-course_number">
+        <script src="http://megatimer.ru/s/c7601ff061f1aa24663f5780766161fa.js"></script>
+      </div>
     </div>
     <div class="entry-course_price">
       <img class="entry-course_price-bg" src="img/entry-price-bg.png" alt="">
@@ -289,7 +314,7 @@
     </div>
     <form class="entry-course_form">
       <div class="form_item"><input type="text" placeholder="*Имя Фамилия"></div>
-      <div class="form_item"><input type="text" placeholder="*Телефон: +7() - -"></div>
+      <div class="form_item"><input type="text" placeholder="*Телефон: +7() - -" class="phone-mask"></div>
       <div class="form_item"><input type="text" placeholder="*Email: ...@..."></div>
 
       <button href="#" class="c-btn-record">Записаться на курс</button>
@@ -301,7 +326,7 @@
   <a href="#" class="c-scroll-down_icon"></a>
 </div>
 
-<section class="trainers">
+<section id="trainers" class="trainers">
   <div class="container-layout">
     <h2 class="section_title">Наши тренеры</h2>
     <ul class="trainers-list">
@@ -331,17 +356,17 @@
   <nav class="footer-menu">
     <div class="container-layout">
       <ul class="c-menu">
-        <li class="c-menu_item"><a href="#" class="c-menu_link">О курсе</a></li>
-        <li class="c-menu_item"><a href="#" class="c-menu_link">Отзывы работодателей</a></li>
-        <li class="c-menu_item"><a href="#" class="c-menu_link">Отзывы студентов</a></li>
-        <li class="c-menu_item"><a href="#" class="c-menu_link">Тренеры</a></li>
+        <li class="c-menu_item"><a href="#video" class="c-menu_link">О курсе</a></li>
+        <li class="c-menu_item"><a href="#employers" class="c-menu_link">Отзывы работодателей</a></li>
+        <li class="c-menu_item"><a href="#student" class="c-menu_link">Отзывы студентов</a></li>
+        <li class="c-menu_item"><a href="#trainers" class="c-menu_link">Тренеры</a></li>
       </ul>
       <a href="#" class="c-enrol">Записаться на курс</a>
     </div><!-- end container-layout -->
   </nav><!--end footer-menu-->
   <div class="container-layout">
     <div class="footer-copyright">
-      <div class="footer-copyright_text">Copyright © 2015, Опыт работы</div>
+      <div class="footer-copyright_text">Copyright © 2017, Опыт работы</div>
       <div class="footer-copyright_signature">Site by <a  href="http://www.leeft.ru/">Leeft</a></div>
       <a href="#" class="footer-btn-up"></a>
     </div><!--end footer-copyright-->
@@ -350,7 +375,8 @@
 </footer><!--end footer-->
 
 <!--scripts-->
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="bower_components/jquery-mask-plugin/dist/jquery.mask.js"></script>
+<script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
 <script src="bower_components/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
