@@ -169,3 +169,32 @@
     background: url("../img/icon-scroll-down.png") 0 0 no-repeat;
   }
 }
+
+.c-timer {
+  font-family: 'PF DinText Pro';
+
+  &_item {
+    display: inline-block;
+    color: #212121;
+    font-size: 65px;
+    font-weight: 300;
+    padding: 10px 16px;
+    padding-bottom: 4px;
+    border-right: 1px solid #000;
+
+    &:last-child,
+    &:last-child .c-timer_text {
+      border: none;
+      color: #ef4e37;
+    }
+  }
+
+  &_text {
+    text-align: center;
+    color: #212121;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'PF DinText Pro';
+  }
+}

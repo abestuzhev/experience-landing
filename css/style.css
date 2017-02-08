@@ -321,6 +321,28 @@ input[placeholder] {
     height: 79px;
     background: url("../img/icon-scroll-down.png") 0 0 no-repeat; }
 
+.c-timer {
+  font-family: 'PF DinText Pro'; }
+  .c-timer_item {
+    display: inline-block;
+    color: #212121;
+    font-size: 65px;
+    font-weight: 300;
+    padding: 10px 16px;
+    padding-bottom: 4px;
+    border-right: 1px solid #000; }
+    .c-timer_item:last-child,
+    .c-timer_item:last-child .c-timer_text {
+      border: none;
+      color: #ef4e37; }
+  .c-timer_text {
+    text-align: center;
+    color: #212121;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'PF DinText Pro'; }
+
 .header {
   position: relative;
   background: url("../img/section-bg-1.jpg") 0 0 no-repeat;
@@ -355,7 +377,7 @@ input[placeholder] {
       text-transform: uppercase;
       font-family: 'Helvetica Neue LT Cyrillic';
       margin-bottom: 8px; }
-    .header-timer_number > div {
+    .header-timer_wrap > div {
       text-align: left !important; }
   .header-tagline {
     margin-bottom: 10px;
