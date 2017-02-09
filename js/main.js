@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
   //липкий nav
-  // $(".header_menu").stick_in_parent();
 
   $(window).scroll(function(){
     var winTop = $(window).scrollTop();
@@ -9,6 +8,7 @@ $(document).ready(function () {
       $(".header_menu").addClass("sticky-header");
     }else{
       $(".header_menu").removeClass("sticky-header");
+      $(".c-menu_link").removeClass("active-item");
     }//if-else
   });//win func.
 
@@ -18,28 +18,38 @@ $(document).ready(function () {
     offset: 100
   });
 
-var menuHeight = 90;
-//плавный якорь
-$(".c-menu").on("click","a", function (event) {
-      event.preventDefault();
-      var id  = $(this).attr('href'),
-          top = $(id).offset().top - menuHeight;
-      $('body,html').animate({scrollTop: top}, 1000);
-  });
 
-  $(".c-btn-record").on("click",function (event) {
+
+//плавный якорь
+function scrollToAnchor (elem) {
+  $(elem).on("click", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
-            top = $(id).offset().top - menuHeight - 80;
-        $('body,html').animate({scrollTop: top}, 1000);
+            menuHeight = 75,
+            top = $(id).offset().top;
+            topIndent = top - menuHeight;
+            console.log(top)
+        $('body').animate({scrollTop: topIndent}, 1000);
     });
+};
 
-    $(".c-enrol").on("click",function (event) {
-          event.preventDefault();
-          var id  = $(this).attr('href'),
-              top = $(id).offset().top - menuHeight;
-          $('body,html').animate({scrollTop: top}, 1000);
-      });
+
+$(".c-enrol, .c-btn-record").on("click", function (event) {
+    event.preventDefault();
+    $(".c-menu a").removeClass("active-item");
+});
+
+$(".c-menu_link").on("click", function (event) {
+    event.preventDefault();
+    $(".c-menu a").removeClass("active-item");
+    $(this).addClass("active-item");
+});
+
+
+scrollToAnchor(".c-menu a");
+scrollToAnchor(".c-btn-record");
+scrollToAnchor(".c-enrol");
+scrollToAnchor(".c-scroll-down_icon");
 
   function setEqualHeight(columns) {
     var tallestcolumn = 0;

@@ -10,7 +10,8 @@
   background: url($img-dir + "section-bg-1.jpg") 38px 1px no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  padding-top: 16px;
+  // padding-top: 16px;
+  padding-bottom: 75px;
 
   //grid-item
   .grid_item {
@@ -36,6 +37,10 @@
 
   &_menu {
     background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     &::after {
       content: "";
@@ -85,6 +90,10 @@
     }
   }
 }//header
+
+.active-item {
+  color: #25aaba;
+}
 
 //video
 .video {
@@ -184,7 +193,7 @@
 
 //target
 .target {
-  margin-bottom: 36px;
+  margin-bottom: 9px;
 
   .section_title {
     margin-bottom: 5px;
@@ -244,6 +253,7 @@
 //employment
 //*****************************************
 .employment {
+  position: relative;
 
   .section_title {
     margin-bottom: 30px;
@@ -306,6 +316,15 @@
       }
     }
   }
+
+  &_bg {
+    position: absolute;
+    bottom: -15%;
+    right: 12%;
+    width: 218px;
+    height: 211px;
+    background: url("../img/elem-employment.png") 0 0 no-repeat;
+  }
 }
 
 //*****************************************
@@ -321,13 +340,13 @@
 
   &_elem-1 {
     position: absolute;
-    left: 0;
-    top: -104px;
+    left: -44px;
+    top: -86px;
     background: url("../img/elem-rewiews-student.png") 0 0 no-repeat;
   }
 
   & + .c-scroll-down {
-    padding: 53px 0;
+    padding: 53px 0 36px;
   }
 }
 
@@ -338,7 +357,7 @@
   position: relative;
 
   .section_title {
-    margin-bottom: 50px;
+      margin-bottom: 46px;
   }
 
   &_bg {
@@ -354,7 +373,7 @@
   }
 
   & + .c-scroll-down {
-    padding: 48px 0 36px;
+    padding: 53px 0 20px;
   }
 }
 
@@ -525,7 +544,7 @@
 
   }
   & + .c-scroll-down {
-    padding: 58px 0 29px;
+    padding: 58px 0 12px;
   }
 
 }
