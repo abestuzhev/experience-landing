@@ -8,7 +8,6 @@ $(document).ready(function () {
       $(".header_menu").addClass("sticky-header");
     }else{
       $(".header_menu").removeClass("sticky-header");
-      $(".c-menu_link").removeClass("active-item");
     }//if-else
   });//win func.
 
@@ -32,19 +31,6 @@ function scrollToAnchor (elem) {
         $('body').animate({scrollTop: topIndent}, 1000);
     });
 };
-
-
-$(".c-enrol, .c-btn-record").on("click", function (event) {
-    event.preventDefault();
-    $(".c-menu a").removeClass("active-item");
-});
-
-$(".c-menu_link").on("click", function (event) {
-    event.preventDefault();
-    $(".c-menu a").removeClass("active-item");
-    $(this).addClass("active-item");
-});
-
 
 scrollToAnchor(".c-menu a");
 scrollToAnchor(".c-btn-record");

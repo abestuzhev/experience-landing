@@ -422,9 +422,6 @@ input[placeholder] {
       content: '';
       background: url("../img/icon-arrow-white.png") 0 0 no-repeat; }
 
-.active-item {
-  color: #25aaba; }
-
 .video {
   position: relative;
   height: 760px;
