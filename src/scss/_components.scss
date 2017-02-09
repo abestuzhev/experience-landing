@@ -176,7 +176,13 @@
     display: inline-block;
     width: 29px;
     height: 79px;
+    transition: all .2s ease-out;
     background: url("../img/icon-scroll-down.png") 0 0 no-repeat;
+
+    &:hover {
+      transition: all .2s ease-out;
+      background: url("../img/icon-scroll-down-hover.png") 0 0 no-repeat;
+    }
   }
 }
 

@@ -32,6 +32,8 @@ function scrollToAnchor (elem) {
     });
 };
 
+
+
 scrollToAnchor(".c-menu a");
 scrollToAnchor(".c-btn-record");
 scrollToAnchor(".c-enrol");

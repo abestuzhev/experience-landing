@@ -336,7 +336,11 @@ input[placeholder] {
     display: inline-block;
     width: 29px;
     height: 79px;
+    transition: all .2s ease-out;
     background: url("../img/icon-scroll-down.png") 0 0 no-repeat; }
+    .c-scroll-down_icon:hover {
+      transition: all .2s ease-out;
+      background: url("../img/icon-scroll-down-hover.png") 0 0 no-repeat; }
 
 .c-timer {
   font-family: 'PF DinText Pro'; }
