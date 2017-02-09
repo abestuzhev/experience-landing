@@ -44,7 +44,7 @@
   font-family: 'PF DinText Pro';
   font-style: normal;
   font-weight: 300;
-  src: local("PF DinText Pro Light"), local("PFDinTextPro-Light"), url("../fonts/pfdintextpro-light.woff") format("woff"); }
+  src: local("PF DinText Pro Light"), local("PFDinTextPro-Light"), url("../fonts/PFDinTextCondPro-Light.woff") format("woff"); }
 
 @font-face {
   font-family: 'PF DinText Pro';
@@ -73,6 +73,9 @@ body {
   font-family: "Helvetica Neue LT Cyrillic", sans-serif;
   font-weight: 100; }
 
+body {
+  overflow-x: hidden; }
+
 p {
   margin: 0;
   margin-bottom: 20px;
@@ -84,6 +87,18 @@ a {
 
 ul {
   list-style: none; }
+
+.sticky-header {
+  background-color: #fff !important;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0px 10px 5px -4px rgba(0, 0, 0, 0.15); }
 
 .container-layout {
   position: relative;
@@ -114,6 +129,9 @@ ul {
 *::before,
 *::after {
   box-sizing: border-box; }
+
+section {
+  width: 100%; }
 
 .radio {
   position: absolute;
@@ -353,6 +371,7 @@ input[placeholder] {
 
 .header {
   position: relative;
+  z-index: 9999;
   background: url("../img/section-bg-1.jpg") 38px 1px no-repeat;
   background-size: cover;
   padding-top: 16px; }
@@ -423,10 +442,16 @@ input[placeholder] {
   .train .section_subtitle {
     margin-bottom: 16px; }
   .train_bg {
-    width: 100%;
+    background: url("../img/train-bg.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 472px;
     position: absolute;
     bottom: -15%;
-    left: 0; }
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .train-list {
     margin-bottom: 50px; }
   .train-item {
@@ -566,10 +591,16 @@ input[placeholder] {
   .reviews-employers .section_title {
     margin-bottom: 50px; }
   .reviews-employers_bg {
-    width: 100%;
+    background: url("../img/reviews-employers-bg.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 1021px;
     position: absolute;
-    bottom: -42%;
-    left: 0; }
+    bottom: -49%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .reviews-employers + .c-scroll-down {
     padding: 48px 0 36px; }
 
@@ -580,10 +611,16 @@ input[placeholder] {
   .entry-course .section_subtitle {
     margin-bottom: 33px; }
   .entry-course_bg {
-    width: 100%;
+    background: url("../img/elem-entry-course.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 328px;
     position: absolute;
     bottom: -7%;
-    left: -13px; }
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .entry-course_title {
     color: #232323;
     font-family: 'Helvetica Neue LT Cyrillic';
@@ -598,6 +635,8 @@ input[placeholder] {
     vertical-align: top; }
   .entry-course .c-timer_item:first-child {
     padding-left: 0; }
+  .entry-course .c-timer_item:first-child .c-timer_text {
+    left: 40%; }
   .entry-course_number > div {
     text-align: left !important; }
   .entry-course_price {
@@ -701,7 +740,7 @@ input[placeholder] {
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    width: 340px; }
+    width: 335px; }
     .trainers-item_img {
       width: 148px;
       height: 148px;

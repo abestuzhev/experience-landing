@@ -6,6 +6,7 @@
 //header
 .header {
   position: relative;
+  z-index: 9999;
   background: url($img-dir + "section-bg-1.jpg") 38px 1px no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -118,10 +119,14 @@
   }
 
   &_bg {
-    width: 100%;
+    background: url("../img/train-bg.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 472px;
     position: absolute;
     bottom: -15%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &-list {
@@ -337,10 +342,15 @@
   }
 
   &_bg {
-    width: 100%;
+
+    background: url("../img/reviews-employers-bg.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 1021px;
     position: absolute;
-    bottom: -42%;
-    left: 0;
+    bottom: -49%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   & + .c-scroll-down {
@@ -364,10 +374,14 @@
   }
 
   &_bg {
-    width: 100%;
+    background: url("../img/elem-entry-course.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 328px;
     position: absolute;
     bottom: -7%;
-    left: -13px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &_title {
@@ -388,6 +402,10 @@
 
   .c-timer_item:first-child {
     padding-left: 0;
+  }
+
+  .c-timer_item:first-child .c-timer_text{
+    left: 40%;
   }
 
   &_number {
@@ -538,7 +556,7 @@
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    width: 340px;
+    width: 335px;
 
     &_img {
       width: 148px;

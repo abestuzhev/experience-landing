@@ -1,30 +1,43 @@
 $(document).ready(function () {
 
-//плавный появление
+  //липкий nav
+  // $(".header_menu").stick_in_parent();
+
+  $(window).scroll(function(){
+    var winTop = $(window).scrollTop();
+    if(winTop >= 530){
+      $(".header_menu").addClass("sticky-header");
+    }else{
+      $(".header_menu").removeClass("sticky-header");
+    }//if-else
+  });//win func.
+
+//плавное появление
   $('section').addClass("hidden").viewportChecker({
     classToAdd: 'visible animated fadeIn',
     offset: 100
   });
 
+var menuHeight = 90;
 //плавный якорь
 $(".c-menu").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
-          top = $(id).offset().top;
+          top = $(id).offset().top - menuHeight;
       $('body,html').animate({scrollTop: top}, 1000);
   });
 
   $(".c-btn-record").on("click",function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
-            top = $(id).offset().top;
+            top = $(id).offset().top - menuHeight - 80;
         $('body,html').animate({scrollTop: top}, 1000);
     });
 
     $(".c-enrol").on("click",function (event) {
           event.preventDefault();
           var id  = $(this).attr('href'),
-              top = $(id).offset().top;
+              top = $(id).offset().top - menuHeight;
           $('body,html').animate({scrollTop: top}, 1000);
       });
 
@@ -51,6 +64,7 @@ $(".c-menu").on("click","a", function (event) {
     );
   });
 
+//slider
   $('.reviews-student .slider').slick({
       autoplay: false,
       autoplaySpeed: 5000,
@@ -77,39 +91,7 @@ $(".c-menu").on("click","a", function (event) {
 
     $('.phone-mask').mask('+7(000)000-00-00');
 
-
-  //timer
-  // var remain_bv   = 1657680;
-  // function parseTime_bv(timestamp){
-  // if (timestamp < 0) timestamp = 0;
-  //
-  // var day = Math.floor( (timestamp/60/60) / 24);
-  // var hour = Math.floor(timestamp/60/60);
-  // var mins = Math.floor((timestamp - hour*60*60)/60);
-  // var secs = Math.floor(timestamp - hour*60*60 - mins*60);
-  // var left_hour = Math.floor( (timestamp - day*24*60*60) / 60 / 60 );
-  //
-  // $('.c-time_day').text(day);
-  // $('.c-time_hour').text(left_hour);
-  //
-  // if(String(mins).length > 1)
-  //     $('.c-time_mins').text(mins);
-  // else
-  //     $('.c-time_mins').text("0" + mins);
-  // if(String(secs).length > 1)
-  //     $('.c-time_secs').text(secs);
-  // else
-  //     $('.c-time_secs').text("0" + secs);
-  //
-  // }
-  // setInterval(function(){
-  //     remain_bv = remain_bv - 1;
-  //     parseTime_bv(remain_bv);
-  //     if(remain_bv <= 0){
-  //         alert('Hello');
-  //     }
-  // }, 1000);
-
+//timer
   function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor((t / 1000) % 60);
@@ -149,7 +131,10 @@ function initializeClock(timer, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
+//если надо установить количество дней для таймера, раскоментировать строчку ниже и изменить значения
 // var deadline = new Date(Date.parse(new Date()) + 14 * 24 * 60 * 60 * 1000);
+
+//если отправная точка определенная дата
 var deadline = "2017-03-05";
 
 initializeClock('.c-timer', deadline);
