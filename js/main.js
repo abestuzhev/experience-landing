@@ -125,8 +125,8 @@ $(".c-menu").on("click","a", function (event) {
   };
 }
 
-function initializeClock(id, endtime) {
-  var clock = document.querySelector(".c-timer");
+function initializeClock(timer, endtime) {
+  var clock = document.querySelector(timer);
   var daysSpan = clock.querySelector('.c-time_day');
   var hoursSpan = clock.querySelector('.c-time_hour');
   var minutesSpan = clock.querySelector('.c-time_mins');
@@ -149,7 +149,10 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 14 * 24 * 60 * 60 * 1000);
+// var deadline = new Date(Date.parse(new Date()) + 14 * 24 * 60 * 60 * 1000);
+var deadline = "2017-03-05";
+
 initializeClock('.c-timer', deadline);
+initializeClock('.entry-course .c-timer', deadline);
 
 });

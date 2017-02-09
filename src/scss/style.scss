@@ -6,19 +6,19 @@
 //header
 .header {
   position: relative;
-  background: url($img-dir + "section-bg-1.jpg") 0 0 no-repeat;
+  background: url($img-dir + "section-bg-1.jpg") 38px 1px no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   padding-top: 16px;
 
   //grid-item
   .grid_item {
-    width: 400px;
+    width: 410px;
   }
 
   //header-logo
   &-logo {
-    margin-bottom: 52px;
+    margin-bottom: 49px;
 
     &_img {
       margin-bottom: 10px;
@@ -41,14 +41,10 @@
       display: block;
       clear: both;
     }//::after
-
-    .c-enrol {
-      color: #EF4E37;
-    }
   }//header_menu
 
   &-timer {
-    margin-bottom: 52px;
+    margin-bottom: 57px;
 
     &_title {
       color: #212121;
@@ -56,7 +52,7 @@
       font-weight: 100;
       text-transform: uppercase;
       font-family: 'Helvetica Neue LT Cyrillic';
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     &_wrap {
@@ -79,6 +75,7 @@
   .c-btn-record {
     background-color: #25aaba;
     color: #fff;
+    margin-bottom: 4px;
 
     &::after {
       content: '';
@@ -111,9 +108,10 @@
 .train {
   padding: 3.75em 0;
   position: relative;
+  margin-bottom: 53px;
 
   .section_title {
-    margin-bottom: 23px;
+    margin-bottom: 18px;
   }
   .section_subtitle {
     margin-bottom: 16px;
@@ -122,7 +120,7 @@
   &_bg {
     width: 100%;
     position: absolute;
-    bottom: -7%;
+    bottom: -15%;
     left: 0;
   }
 
@@ -173,7 +171,7 @@
       font-size: 22px;
       font-weight: 400;
       font-family: 'Helvetica Neue LT Cyrillic';
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
   }
 }//train
@@ -181,9 +179,13 @@
 
 //target
 .target {
-  margin-bottom: 54px;
+  margin-bottom: 36px;
 
+  .section_title {
+    margin-bottom: 5px;
+  }
   .section_subtitle {
+    margin-top: 0;
     margin-bottom: 32px;
   }
 
@@ -201,7 +203,13 @@
     text-align: center;
     display: inline-block;
     vertical-align: top;
-    width: 10%;
+    width: 12%;
+
+    &:last-child,
+    &:nth-child(5),
+    &:nth-child(6) {
+      width: 8%;
+    }
 
     &_point {
       width: 67px;
@@ -254,7 +262,7 @@
     background-color: #FFF;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
     vertical-align: top;
-    padding: 26px 30px 73px;
+    padding: 26px 30px 48px;
 
 
     &_img {
@@ -303,7 +311,7 @@
   z-index: 1002;
 
   .section_title {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
   }
 
   &_elem-1 {
@@ -311,6 +319,10 @@
     left: 0;
     top: -104px;
     background: url("../img/elem-rewiews-student.png") 0 0 no-repeat;
+  }
+
+  & + .c-scroll-down {
+    padding: 53px 0;
   }
 }
 
@@ -327,8 +339,12 @@
   &_bg {
     width: 100%;
     position: absolute;
-    bottom: -65%;
+    bottom: -42%;
     left: 0;
+  }
+
+  & + .c-scroll-down {
+    padding: 48px 0 36px;
   }
 }
 
@@ -344,14 +360,14 @@
   }
 
   .section_subtitle {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 
   &_bg {
     width: 100%;
     position: absolute;
-    bottom: -6%;
-    left: 0;
+    bottom: -7%;
+    left: -13px;
   }
 
   &_title {
@@ -360,14 +376,18 @@
     font-weight: 500;
     font-size: 24px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   &-timer {
     width: 38%;
-    padding: 0 30px;
+    padding-left: 30px;
     display: inline-block;
     vertical-align: top;
+  }
+
+  .c-timer_item:first-child {
+    padding-left: 0;
   }
 
   &_number {
@@ -387,6 +407,8 @@
 
     &-bg {
       position: absolute;
+      left: 9px;
+      top: -3px;
     }
 
     &-wrap {
@@ -467,6 +489,27 @@
     }
   }
 
+  .c-timer {
+
+    &_item {
+      font-size: 60px;
+      font-weight: 300;
+      padding: 10px 17px;
+      padding-bottom: 4px;
+
+      &:last-child,
+      &:last-child .c-timer_text {
+        border: none;
+        color: #25aaba;
+      }
+    }
+
+
+  }
+  & + .c-scroll-down {
+    padding: 58px 0 29px;
+  }
+
 }
 
 
@@ -474,7 +517,7 @@
 //trainers
 //*****************************************
 .trainers {
-  padding-bottom: 104px;
+  padding-bottom: 90px;
   background: url("../img/trainers-bg.png") 0 100% no-repeat;
 
   .section_title {
@@ -495,7 +538,7 @@
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    width: 350px;
+    width: 340px;
 
     &_img {
       width: 148px;
@@ -509,14 +552,14 @@
       font-family: "Helvetica Neue LT Cyrillic";
       font-size: 20px;
       font-weight: 500;
-      margin-bottom: 13px;
+      margin-bottom: 9px;
     }
 
     &_text {
       color: #343434;
       font-family: "Helvetica Neue LT Cyrillic";
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.4;
       font-size: 16px;
     }
   }
@@ -553,19 +596,13 @@
     .c-menu_link {
       color: #fff;
       text-decoration: underline;
+      font-weight: 400;
+      font-size: 15px;
+      padding: 1.78em 1.3em;
 
       &:hover {
         color: #25aaba;
         transition: all .2s ease-out;
-      }
-    }
-
-    .c-enrol {
-      color: #25AABA;
-
-      &::before,
-      &::after {
-        background-color: #25AABA;
       }
     }
   }//footer-menu

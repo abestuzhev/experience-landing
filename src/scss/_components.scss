@@ -3,18 +3,19 @@
   &_item {
     display: inline-block;
 
-    &:first-child {
+    &:first-child a {
       padding-left: 0;
     }
   }
 
   &_link {
     display: block;
-    padding: 1.875em 1.25em;
+    padding: 1.28em 1.3em;
     color: #212121;
-    font-size: 1.125em;
+    font-size: 1.2em;
     font-weight: 700;
     transition: all .2s ease-out;
+
 
     &:hover {
       color: #ef4e37;
@@ -27,18 +28,27 @@
 //c-enrol
 .c-enrol {
   float: right;
-  margin: 1.875em;
+  margin: 1.58em;
   margin-right: 0;
-  font-size: 1.125em;
+  font-size: 1.1em;
   text-transform: uppercase;
-  color: #212121;
+  color: #EF4E37;
   font-weight: 700;
   position: relative;
   transition: all .2s ease-out;
 
+
   &:hover {
-    opacity: .8;
+    //opacity: .8;
     transition: all .2s ease-out;
+    color: #25aaba;
+    
+    &::before,
+    &::after {
+    background-color: #25aaba;
+    transition: all .2s ease-out;
+  }
+
   }
 
   &::before,
@@ -73,7 +83,7 @@
   text-transform: uppercase;
   border-radius: 50px;
   padding: .40em 1.3em .21em .9em;
-  margin-bottom: 58px;
+  //margin-bottom: 58px;
   background-color: #e7ee15;
   position: relative;
   cursor: pointer;
@@ -170,6 +180,7 @@
   }
 }
 
+//.c-timer
 .c-timer {
   font-family: 'PF DinText Pro';
 
@@ -178,9 +189,10 @@
     color: #212121;
     font-size: 65px;
     font-weight: 300;
-    padding: 10px 16px;
+    padding: 2px 17px;
     padding-bottom: 4px;
     border-right: 1px solid #000;
+    position: relative;
 
     &:last-child,
     &:last-child .c-timer_text {
@@ -190,7 +202,11 @@
   }
 
   &_text {
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translateX(-50%);
+    //text-align: center;
     color: #212121;
     font-size: 12px;
     font-weight: 300;
