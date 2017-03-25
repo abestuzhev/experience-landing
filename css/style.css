@@ -377,17 +377,31 @@ input[placeholder] {
   background-size: cover;
   padding-bottom: 75px; }
   .header .grid_item {
-    width: 410px; }
+    width: 50%; }
   .header-logo {
-    margin-bottom: 49px; }
+    margin-bottom: 10px; }
     .header-logo_img {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      display: inline-block;
+      margin-right: 20px; }
     .header-logo_text {
+      vertical-align: top;
+      display: inline-block; }
+    .header-logo_text-item {
       color: #1E2431;
-      font-family: "Neo Sans Cyr";
-      font-size: 36px;
+      font-family: "Neo Sans Cyr", sans-serif;
+      font-size: 32px;
       font-weight: 400;
       text-transform: uppercase; }
+  .header-description {
+    margin-bottom: 38px;
+    width: 79%;
+    color: #EF4E37;
+    font-family: 'Helvetica Neue LT Cyrillic', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1.2; }
   .header_menu {
     background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
@@ -548,22 +562,27 @@ input[placeholder] {
   .employment-item {
     display: inline-block;
     text-align: center;
-    width: 295px;
+    width: 23%;
     background-color: #FFF;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
     vertical-align: top;
-    padding: 26px 30px 48px; }
+    padding: 26px 30px 0; }
     .employment-item_img {
       text-align: center;
       margin-bottom: 24px; }
     .employment-item_text {
       color: #4A4A4A;
-      font-family: "Helvetica Neue LT Cyrillic";
-      font-size: 22px;
-      font-weight: 100;
-      padding-bottom: 24px;
-      position: relative; }
-      .employment-item_text::before, .employment-item_text::after {
+      font-family: 'Helvetica Neue LT 57', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      position: relative;
+      margin-bottom: 10px; }
+    .employment-item_icon {
+      width: 100%;
+      height: 5px;
+      position: relative;
+      margin-bottom: 26px; }
+      .employment-item_icon::before, .employment-item_icon::after {
         content: "";
         position: absolute;
         left: 50%;
@@ -573,12 +592,12 @@ input[placeholder] {
             -ms-transform: translateX(-50%);
                 transform: translateX(-50%);
         background-color: #5c5c5c; }
-      .employment-item_text::before {
+      .employment-item_icon::before {
+        content: "";
+        top: 0; }
+      .employment-item_icon::after {
         content: "";
         bottom: 0; }
-      .employment-item_text::after {
-        content: "";
-        bottom: -4px; }
   .employment_bg {
     position: absolute;
     bottom: -15%;
@@ -745,7 +764,9 @@ input[placeholder] {
   .trainers .section_title {
     margin-bottom: 40px; }
   .trainers-list {
-    text-align: justify; }
+    text-align: justify;
+    font-size: 0;
+    margin-bottom: 50px; }
     .trainers-list::after {
       content: "";
       display: inline-block;
@@ -754,7 +775,8 @@ input[placeholder] {
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    width: 335px; }
+    padding: 0 20px;
+    width: 25%; }
     .trainers-item_img {
       width: 148px;
       height: 148px;
