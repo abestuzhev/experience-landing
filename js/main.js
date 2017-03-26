@@ -133,7 +133,7 @@ function initializeClock(timer, endtime) {
 // var deadline = new Date(Date.parse(new Date()) + 14 * 24 * 60 * 60 * 1000);
 
 //если отправная точка определенная дата
-var deadline = "2017-03-05";
+var deadline = "2017-06-05";
 
 initializeClock('.c-timer', deadline);
 initializeClock('.entry-course .c-timer', deadline);
