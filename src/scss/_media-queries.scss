@@ -1,0 +1,260 @@
+@media all and (max-width: 1100px){
+  .container-layout {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .c-btn-record {
+    font-size: 1.9em;
+  }
+  .c-menu_link {
+    padding: 1em .6em;
+    font-size: 1.1em;
+  }
+
+  .c-enrol {
+    margin: 1em;
+    font-size: 1em;
+  }
+
+  .sticky-header {
+    height: 55px;
+  }
+  .target-list {
+    text-align: center;
+  }
+
+  .target-list .target-item {
+    width: 25%;
+    margin-bottom: 16px;
+
+  }
+
+  .employment-item {
+    width: 24%;
+  }
+}//end 1100px
+
+@media all and (max-width: 980px){
+  .header {
+    background-position: 40% 50%;
+  }
+
+  .header-logo_text-item {
+    font-size: 27px;
+  }
+
+  .header-logo_img {
+    //margin-right: 0;
+    width: 74px;
+    height: 74px;
+    margin-right: 12px;
+  }
+  .header-logo_img img {
+    width: 100%;
+  }
+
+  .c-btn-record {
+    padding: .4em .9em .25em;
+  }
+  .c-btn-record::after {
+    content: '';
+    display: none;
+  }
+
+  .employment-item {
+    width: 49%;
+    margin-bottom: 12px;
+  }
+}//end media
+
+@media all and (max-width: 890px){
+  .c-menu_link {
+    padding: 1em .3em;
+  }
+
+  .header .grid_item {
+    width: 48%;
+  }
+}//end media
+
+@media all and (max-width: 890px){
+  .header {
+    padding-bottom: 0;
+  }
+
+  .header .sticky-header {
+    //position: static;
+    background-color: #25aaba;
+    height: auto;
+  }
+
+  .c-menu_mobile {
+    display: inline-block;
+  }
+  .header_menu .mobile-student {
+    display: block;
+  }
+  .header_menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    width: 100%;
+    background-color: #25aaba;
+    z-index: 9999;
+    padding-top: 40px;
+    padding-bottom: 90px;
+    text-align: center;
+  }
+
+  .header_menu .container-layout {
+    padding: 0;
+  }
+
+  .c-menu_item {
+    display: block;
+    text-align: center;
+  }
+
+  .c-menu_link {
+    padding: .6em 0;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+
+  .header .c-enrol {
+    color: #E1E72B;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 30px 0;
+    display: inline-block;
+  }
+  .header .c-enrol::after,
+  .header .c-enrol::before {
+    background-color: #E1E72B;
+  }
+
+
+  .c-menu,
+  .c-enrol {
+    float: none;
+  }
+
+}//end media
+
+@media all and (max-width: 735px){
+  .c-btn-record {
+    font-size: 1.5em;
+    padding: .5em 1.1em .35em;
+  }
+
+  .target-list .target-item {
+    width: 33%;
+  }
+}//end media
+
+@media all and (max-width: 650px){
+  .section_title {
+    font-size: 33px;
+  }
+
+  .header-logo {
+    margin-left: 10px;
+  }
+  .header .container-layout {
+    padding: 0;
+  }
+
+  .c-menu_mobile {
+    margin-left: 10px;
+  }
+
+  .container-layout {
+    padding: 0 10px;
+  }
+  .header {
+    background: none;
+  }
+
+  .header .grid_item {
+    width: 100%;
+  }
+
+  .header-description {
+    transform: skewY(-2deg);
+    background-color: #EF4E37;
+    padding: 35px 10px;
+    margin-bottom: 5px;
+  }
+  .header-description_text {
+    transform: skewY(2deg);
+    color: #fff;
+  }
+
+  .l-header-tagline {
+    transform: skewY(-2deg);
+    background-color: #25aaba;
+    padding: 30px 10px 5px;
+    margin-bottom: 26px;
+  }
+
+  .header-tagline,
+  .header-count {
+    transform: skewY(2deg);
+  }
+
+  .header-tagline {
+      color: #fff;
+      font-weight: 700;
+      font-size: 24px;
+  }
+
+  .header-count_title {
+    font-weight: 400;
+  }
+
+  .header-count_number--color {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .header-guarantees {
+    padding: 0 10px;
+  }
+
+  .header-count {
+    margin: 0;
+  }
+
+  .l-c-btn-record {
+    text-align: center;
+  }
+}//end media
+
+@media all and (max-width: 550px) {
+  .target-list .target-item {
+    width: 50%;
+  }
+
+  .employment-item {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .header-description {
+    padding: 45px 10px;
+  }
+
+  .header-logo_text-item {
+    font-size: 1.19em;
+  }
+
+  .header-logo_img {
+    width: 54px;
+    height: 54px;
+  }
+}

@@ -138,4 +138,15 @@ var deadline = "2017-06-05";
 initializeClock('.c-timer', deadline);
 initializeClock('.entry-course .c-timer', deadline);
 
+
+    //mobile menu
+    $(".c-menu_mobile").on("click", function(e){
+        e.preventDefault();
+       $(".header_menu").toggleClass("js-show-menu");
+    });
+
+    $(".c-menu-close").on("click", function(e){
+        e.preventDefault();
+        $(".header_menu").removeClass("js-show-menu");
+    });
 });

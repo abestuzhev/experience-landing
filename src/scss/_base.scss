@@ -37,9 +37,9 @@ ul {
   list-style: none;
 }
 
-.sticky-header {
-  background-color: #fff !important;
-  position: fixed !important;
+.header .sticky-header {
+  background-color: #fff;
+  position: fixed;
   height: 75px;
   top: 0;
   // left: 50%;
@@ -196,4 +196,9 @@ opacity:1;
   text-transform: uppercase;
   text-align: center;
   margin: 10px;
+}
+
+
+.js-show-menu {
+  display: block !important;
 }
