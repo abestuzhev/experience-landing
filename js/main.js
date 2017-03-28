@@ -36,7 +36,7 @@ function scrollToAnchor (elem) {
             menuHeight = 75,
             top = $(id).offset().top;
             topIndent = top - menuHeight;
-            console.log(top)
+            // console.log(top)
         $('body').animate({scrollTop: topIndent}, 1000);
     });
 };
@@ -216,7 +216,7 @@ initializeClock('.entry-course .c-timer', deadline);
 
 
     //mobile menu
-    $(".c-menu_mobile").on("click", function(e){
+    $(".c-menu_mobile, .c-menu_link, .c-enrol").on("click", function(e){
         e.preventDefault();
        $(".header_menu").toggleClass("js-show-menu");
     });
@@ -225,6 +225,7 @@ initializeClock('.entry-course .c-timer', deadline);
         e.preventDefault();
         $(".header_menu").removeClass("js-show-menu");
     });
+
 
 
     //счетчик выпускников

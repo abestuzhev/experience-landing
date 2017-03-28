@@ -214,6 +214,7 @@ input[placeholder] {
 
 .header .js-btn-sticky {
   position: fixed !important;
+  z-index: 9999;
   top: 20px;
   left: 20px;
   overflow: hidden;
