@@ -336,9 +336,9 @@
     width: 100%;
   }
 
-  //.footer-copyright .footer-btn-up {
-  //  display: none;
-  //}
+  .employment-item {
+    height: 390px !important;
+  }
 }//end media
 
 @media all and (max-width: 680px){
@@ -526,8 +526,6 @@
     display: none;
   }
 
-
-
   .entry-course_form {
     background-color: #25aaba;
     padding: 20px 0 30px;
@@ -575,6 +573,10 @@
 
   .trainers {
     padding-bottom: 46px;
+  }
+
+  .employment-item {
+    height: auto !important;
   }
 }
 

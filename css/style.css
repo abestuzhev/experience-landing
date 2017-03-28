@@ -1233,7 +1233,9 @@ input[placeholder] {
     font-size: 30px;
     margin: 24px 0 32px; }
   .footer-student img {
-    width: 100%; } }
+    width: 100%; }
+  .employment-item {
+    height: 390px !important; } }
 
 @media all and (max-width: 680px) {
   .entry-course-timer {
@@ -1395,7 +1397,9 @@ input[placeholder] {
   .entry-course_price {
     margin-bottom: 48px; }
   .trainers {
-    padding-bottom: 46px; } }
+    padding-bottom: 46px; }
+  .employment-item {
+    height: auto !important; } }
 
 @media all and (max-width: 480px) {
   .header-description {

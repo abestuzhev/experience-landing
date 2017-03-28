@@ -248,7 +248,7 @@ initializeClock('.entry-course .c-timer', deadline);
     }
 
     //12 часов = 43200 сек * 1000 милисекунд
-    var timerId = setInterval(add_counter, 5000);
+    var timerId = setInterval(add_counter, 43200000);
 
 
 //     // заносим объект в хранилище
