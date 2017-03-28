@@ -231,6 +231,8 @@
   .train {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    padding-bottom: 9px;
   }
 
   .train .container-layout {
@@ -519,9 +521,12 @@
   .entry-course {
     margin-bottom: 30px;
   }
-  .entry-course_bg {
-    background: none;
+  .entry-course_bg,
+  .reviews-employers_bg {
+    display: none;
   }
+
+
 
   .entry-course_form {
     background-color: #25aaba;

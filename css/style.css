@@ -704,10 +704,12 @@ input[placeholder] {
 
 .reviews-student {
   position: relative;
-  z-index: 1002; }
+  z-index: 1002;
+  overflow: hidden; }
   .reviews-student .section_title {
     margin-bottom: 44px; }
   .reviews-student_elem-1 {
+    overflow: hidden;
     position: absolute;
     left: -44px;
     top: -86px;
@@ -1158,7 +1160,9 @@ input[placeholder] {
     height: 140px; }
   .train {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 9px; }
   .train .container-layout {
     padding: 0; }
   .train-list {
@@ -1350,8 +1354,9 @@ input[placeholder] {
     top: 0%; }
   .entry-course {
     margin-bottom: 30px; }
-  .entry-course_bg {
-    background: none; }
+  .entry-course_bg,
+  .reviews-employers_bg {
+    display: none; }
   .entry-course_form {
     background-color: #25aaba;
     padding: 20px 0 30px;
