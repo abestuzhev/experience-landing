@@ -216,7 +216,7 @@ initializeClock('.entry-course .c-timer', deadline);
 
 
     //mobile menu
-    $(".c-menu_mobile, .c-menu_link, .c-enrol").on("click", function(e){
+    $(".header .c-menu_mobile, .header_menu .c-menu_link, .header .c-enrol").on("click", function(e){
         e.preventDefault();
        $(".header_menu").toggleClass("js-show-menu");
     });
