@@ -202,3 +202,21 @@ opacity:1;
 .js-show-menu {
   display: block !important;
 }
+
+.header .js-btn-sticky {
+  position: fixed !important;
+  top: 20px;
+  left: 20px;
+  overflow: hidden;
+  width: 37px;
+  height: 37px;
+  font-size: 0;
+  box-shadow: 0px 3px 5px -4px rgba(0, 0, 0, 0.15);
+}
+
+.js-btn-sticky .c-menu_mobile-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

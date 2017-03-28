@@ -90,7 +90,7 @@
 //c-enrol
 .c-enrol {
   float: right;
-  margin: 1.58em;
+  margin: 1.38em;
   margin-right: 0;
   font-size: 1.1em;
   text-transform: uppercase;
@@ -149,11 +149,11 @@
   background-color: #e7ee15;
   position: relative;
   cursor: pointer;
-  transition: all .2s ease-out;
+  transition: opacity .2s ease-out;
 
   &:hover {
     opacity: .9;
-    transition: all .2s ease-out;
+    transition: opacity .2s ease-out;
   }
 
   &::after {
