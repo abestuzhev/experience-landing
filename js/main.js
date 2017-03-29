@@ -229,6 +229,14 @@ initializeClock('.entry-course .c-timer', deadline);
 
 
     //счетчик выпускников
+    // var startValue = 54;
+    // option = 0;
+
+
+    // $.cookie('cookie_name', startValue);
+    // var startValue = $.cookie('cookie_name');
+    // $('.header-count_number--color').html("0" + startValue);
+
     var start = 50;
     function add_counter() {
 
@@ -237,7 +245,7 @@ initializeClock('.entry-course .c-timer', deadline);
 
         if(start < end && start <=99) {
             start += invervat ;
-            $('.header-count_number--color').html("00" + start)
+            $('.header-count_number--color').html("0" + start)
         }else if (start < end && start <=999) {
             start += 1 ;
             $('.header-count_number--color').html("0" + start)
@@ -252,10 +260,61 @@ initializeClock('.entry-course .c-timer', deadline);
     var timerId = setInterval(add_counter, 43200000);
 
 
-//     // заносим объект в хранилище
-//     localStorage.setItem( 'countPeople', start);
-// // считываем объект из хранилища
-//     var option = localStorage.getItem('countPeople');
-// // применяем к нужному
-//     $('.header-count_number--color').html(option);
+    // var start = 54;
+    // function add_counter(start) {
+    //     var invervat = 1;
+    //     var end = 9999;
+    //
+    //     if(start < end && start <=99) {
+    //         start += invervat ;
+    //         $('.header-count_number--color').html("0" + start)
+    //     }else if (start < end && start <=999) {
+    //         start += 1 ;
+    //         $('.header-count_number--color').html("0" + start)
+    //     }
+    //     else {
+    //         start += 1 ;
+    //         $('.header-count_number--color').html(start)
+    //     }
+    //     return start;
+    // }
+
+
+    //12 часов = 43200 сек * 1000 милисекунд
+    // var result;
+    // setInterval(function(){
+    //   startValue = +add_counter(startValue);
+    //   console.log(startValue);
+    //
+    //   $.cookie('cookie_name', startValue);
+    //
+    //   var result = 54 + startValue;
+    // }, 500);
+    //
+    //
+    //
+    //
+    //   var a = $.cookie('cookie_name', result);
+    //   console.log(a);
+      // $('.header-count_number--color').html(a);
+
+    // setInterval(function() {
+    //     add_counter();
+    //     // заносим объект в хранилище
+    //     $.cookie('cookie_name', start);
+    //
+    // }, 2000);
+    //
+    // start = $.cookie('cookie_name');
+    // $('.header-count_number--color').html(start);
+    //12 часов = 43200 сек * 1000 милисекунд
+
+    // считываем объект из хранилища
+    // option = localStorage.getItem('count');
+    // console.log(option);
+
+    // var startOld = option - start;
+    // start = start +  startOld;
+    // $('.header-count_number--color').html(start);
+    // window.localStorage.clear();
 });
