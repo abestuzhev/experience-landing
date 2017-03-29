@@ -226,8 +226,6 @@ initializeClock('.entry-course .c-timer', deadline);
         $(".header_menu").removeClass("js-show-menu");
     });
 
-
-
     //счетчик выпускников
     // var startValue = 54;
     // option = 0;
