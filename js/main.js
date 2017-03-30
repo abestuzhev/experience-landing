@@ -26,8 +26,6 @@ $(document).ready(function () {
     offset: 100
   });
 
-
-
 //плавный якорь
 function scrollToAnchor (elem) {
   $(elem).on("click", function (event) {
@@ -40,8 +38,6 @@ function scrollToAnchor (elem) {
         $('body').animate({scrollTop: topIndent}, 1000);
     });
 };
-
-
 
 scrollToAnchor(".c-menu a");
 scrollToAnchor(".c-btn-record");
@@ -61,7 +57,6 @@ scrollToAnchor(".c-scroll-down_icon");
     columns.height(tallestcolumn);
   }
   setEqualHeight($(".employment-item"));
-
 
   $(".footer-btn-up").on("click", function(e){
     e.preventDefault();
@@ -214,7 +209,6 @@ var deadline = "2017-06-05";
 initializeClock('.c-timer', deadline);
 initializeClock('.entry-course .c-timer', deadline);
 
-
     //mobile menu
     $(".header .c-menu_mobile, .header_menu .c-menu_link, .header .c-enrol").on("click", function(e){
         e.preventDefault();
@@ -226,18 +220,8 @@ initializeClock('.entry-course .c-timer', deadline);
         $(".header_menu").removeClass("js-show-menu");
     });
 
-    //счетчик выпускников
-    // var startValue = 54;
-    // option = 0;
-
-
-    // $.cookie('cookie_name', startValue);
-    // var startValue = $.cookie('cookie_name');
-    // $('.header-count_number--color').html("0" + startValue);
-
-    var start = 50;
+    //счетчик выпускников. Редакция 30.03.2017г.
     function add_counter() {
-
         var invervat = 1;
         var end = 9999;
 
@@ -252,67 +236,29 @@ initializeClock('.entry-course .c-timer', deadline);
             start += 1 ;
             $('.header-count_number--color').html(start)
         }
+        return start;
     }
 
-    //12 часов = 43200 сек * 1000 милисекунд
-    var timerId = setInterval(add_counter, 43200000);
+    var num = parseInt($.cookie("visit") || 0) + 1;
+     $.cookie("visit", num); //записываем обновленную величину.
+     if(num == 1){
+      //  alert("Вижу вы тут первый раз");
+       var start = 54;
+       $('.header-count_number--color').html('0' + start);
+        setInterval(function(){
+           result = +add_counter();
+           console.log(result);
+           $.cookie('countResult', result);
+         }, 43200000); //задержка 12 часов (43200 секунд = 43 200 000 милисекунд)
 
-
-    // var start = 54;
-    // function add_counter(start) {
-    //     var invervat = 1;
-    //     var end = 9999;
-    //
-    //     if(start < end && start <=99) {
-    //         start += invervat ;
-    //         $('.header-count_number--color').html("0" + start)
-    //     }else if (start < end && start <=999) {
-    //         start += 1 ;
-    //         $('.header-count_number--color').html("0" + start)
-    //     }
-    //     else {
-    //         start += 1 ;
-    //         $('.header-count_number--color').html(start)
-    //     }
-    //     return start;
-    // }
-
-
-    //12 часов = 43200 сек * 1000 милисекунд
-    // var result;
-    // setInterval(function(){
-    //   startValue = +add_counter(startValue);
-    //   console.log(startValue);
-    //
-    //   $.cookie('cookie_name', startValue);
-    //
-    //   var result = 54 + startValue;
-    // }, 500);
-    //
-    //
-    //
-    //
-    //   var a = $.cookie('cookie_name', result);
-    //   console.log(a);
-      // $('.header-count_number--color').html(a);
-
-    // setInterval(function() {
-    //     add_counter();
-    //     // заносим объект в хранилище
-    //     $.cookie('cookie_name', start);
-    //
-    // }, 2000);
-    //
-    // start = $.cookie('cookie_name');
-    // $('.header-count_number--color').html(start);
-    //12 часов = 43200 сек * 1000 милисекунд
-
-    // считываем объект из хранилища
-    // option = localStorage.getItem('count');
-    // console.log(option);
-
-    // var startOld = option - start;
-    // start = start +  startOld;
-    // $('.header-count_number--color').html(start);
-    // window.localStorage.clear();
+     }else {
+      //  alert("Вижу вы тут уже " + num + " раз!");
+       var start = parseInt($.cookie('countResult'));
+       $('.header-count_number--color').html('0' + start);
+       setInterval(function(){
+          result = +add_counter();
+          console.log(result);
+          $.cookie('countResult', result);
+        }, 43200000);
+     }
 });
