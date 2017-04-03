@@ -220,6 +220,7 @@ initializeClock('.entry-course .c-timer', deadline);
         $(".header_menu").removeClass("js-show-menu");
     });
 
+
     //счетчик выпускников. Редакция 30.03.2017г.
     function add_counter() {
         var invervat = 1;
@@ -242,7 +243,7 @@ initializeClock('.entry-course .c-timer', deadline);
     var num = parseInt($.cookie("visit") || 0) + 1;
      $.cookie("visit", num); //записываем обновленную величину.
      if(num == 1){
-       alert("Вижу вы тут первый раз");
+      //  alert("Вижу вы тут первый раз");
        var start = 54;
        $('.header-count_number--color').html('0' + start);
         setInterval(function(){
@@ -252,7 +253,7 @@ initializeClock('.entry-course .c-timer', deadline);
          }, 4000); //задержка 12 часов (43200 секунд = 43 200 000 милисекунд)
 
      }else {
-       alert("Вижу вы тут уже " + num + " раз!");
+      //  alert("Вижу вы тут уже " + num + " раз!");
        var start = parseInt($.cookie('countResult'));
        $('.header-count_number--color').html('0' + start);
        setInterval(function(){
