@@ -239,12 +239,21 @@ initializeClock('.entry-course .c-timer', deadline);
         }
         return start;
     }
-
+/*
     var num = parseInt($.cookie("visit") || 0) + 1;
      $.cookie("visit", num); //записываем обновленную величину.
      if(num == 1){
-      //  alert("Вижу вы тут первый раз");
+       alert("Вижу вы тут первый раз");
+       var time = Date.now();
+       console.log(time);
+
+       var newTimer = new Date(time + 5000);
+
+      if()){
+
+      }
        var start = 54;
+       $.cookie('countResult', start); //по умолчанию
        $('.header-count_number--color').html('0' + start);
         setInterval(function(){
            result = +add_counter();
@@ -253,7 +262,7 @@ initializeClock('.entry-course .c-timer', deadline);
          }, 4000); //задержка 12 часов (43200 секунд = 43 200 000 милисекунд)
 
      }else {
-      //  alert("Вижу вы тут уже " + num + " раз!");
+       alert("Вижу вы тут уже " + num + " раз!");
        var start = parseInt($.cookie('countResult'));
        $('.header-count_number--color').html('0' + start);
        setInterval(function(){
@@ -262,4 +271,31 @@ initializeClock('.entry-course .c-timer', deadline);
           $.cookie('countResult', result);
         }, 4000);
      }
+
+*/
+
+     var num = parseInt($.cookie("visit") || 0) + 1;
+      $.cookie("visit", num); //записываем обновленную величину.
+      if(num == 1){
+        alert("Вижу вы тут первый раз");
+        var start = 54;
+        $.cookie('countResult', start); //по умолчанию
+        $('.header-count_number--color').html('0' + start);
+         setInterval(function(){
+            result = +add_counter();
+            console.log(result);
+            $.cookie('countResult', result);
+          }, 60000); //задержка 12 часов (43200 секунд = 43 200 000 милисекунд)
+
+      }else {
+        alert("Вижу вы тут уже " + num + " раз!");
+        var start = parseInt($.cookie('countResult'));
+        $('.header-count_number--color').html('0' + start);
+        setInterval(function(){
+           result = +add_counter();
+           console.log(result);
+           $.cookie('countResult', result);
+         }, 60000);
+      }
+
 });
