@@ -256,21 +256,21 @@ initializeClock('.entry-course .c-timer', deadline);
            result = +add_counter();
           //  console.log(result);
            $.cookie('countResult', result);
-         }, 180000);
+         }, 60000);
 
      }else {
       //  alert("Вижу вы тут уже " + num + " раз!");
        var newTime = Date.now();
-       var timeCookie =  parseInt($.cookie('timeUser', time)) + 2*60000;
-      //  console.log('new time:' + newTime);
-      //  console.log('coe time:' + timeCookie);
+       var timeCookie =  parseInt($.cookie('timeUser', time)) + 60000;
+       console.log('new time:' + newTime);
+       console.log('coe time:' + timeCookie);
 
-       if(timeCookie <= newTime){
+       if(newTime >= timeCookie){
          var start = parseInt($.cookie('countResult'));
          $('.header-count_number--color').html('0' + start);
           result = +add_counter();
           // console.log(result);
-          $.cookie('countResult', result);
+          $.cookie('countResult', result+5);
           $.cookie('timeUser', newTime);
        }else{
          var start = parseInt($.cookie('countResult'));
